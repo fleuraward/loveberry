@@ -1,0 +1,581 @@
+---
+title: ♡ text effects
+cat: resources
+layout: res.njk
+cssFile: <link rel="stylesheet" href="/assets/css/text.css">
+---
+<h3 class="revgrad ttmarby">Text Effects</h3>
+
+<div class="colfl">
+    <div class="col">
+<!-- TUMBLR WOBBLE SNIPPET -->
+<section class="snippetbox"> 
+        <div class="snippet">
+          <div class="tumblrwob">
+            <span class="wobble">t</span><span class="wobble">u</span><span class="wobble">m</span><span class="wobble">b</span><span class="wobble">l</span><span class="wobble">r</span><span class="wobble"> </span><span class="wobble">w</span><span class="wobble">o</span><span class="wobble">b</span><span class="wobble">b</span><span class="wobble">l</span><span class="wobble">e</span>
+          </div>
+        </div>
+          <details>
+            <summary>View Code</summary>
+            <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.tumblrwob {
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+white-space:pre;
+font-size: 2em;
+font-family: Arial;
+}
+
+.wobble:nth-child(4n+1) {
+-webkit-animation:tumblrwobble 4s ease-in-out -.5s infinite;
+animation:tumblrwobble 4s ease-in-out -.5s infinite
+}
+
+@keyframes tumblrwobble{
+0%  { transform:translateY(5%) skew(3deg) }
+25% { transform:translateY(-5%) }
+50% { transform:translateY(5%) skew(-3deg) }
+75% { transform:translateY(-5%) }
+to { transform:translateY(5%) skew(3deg) }
+}
+
+@-webkit-keyframes tumblrwobble{
+0%  { transform:translateY(5%) skew(3deg) }
+25% { transform:translateY(-5%) }
+50% { transform:translateY(5%) skew(-3deg) }
+75% { transform:translateY(-5%) }
+to { transform:translateY(5%) skew(3deg) }
+}
+
+.wobble:nth-child(4n+2){
+-webkit-animation:tumblrwobble 4s ease-in-out -1s infinite;
+animation:tumblrwobble 4s ease-in-out -1s infinite;
+}
+
+.wobble:nth-child(4n+3){
+-webkit-animation:tumblrwobble 4s ease-in-out -1.5s infinite;
+animation:tumblrwobble 4s ease-in-out -1.5s infinite;
+}
+
+.wobble:nth-child(4n){
+-webkit-animation:tumblrwobble 4s ease-in-out 0s infinite;
+animation:tumblrwobble 4s ease-in-out 0s infinite;
+}
+</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="tumblrwob"&gt;&lt;span class="wobble"&gt;t&lt;/span&gt;&lt;span class="wobble"&gt;u&lt;/span&gt;&lt;span class="wobble"&gt;m&lt;/span&gt;&lt;span class="wobble"&gt;b&lt;/span&gt;&lt;span class="wobble"&gt;l&lt;/span&gt;&lt;span class="wobble"&gt;r&lt;/span&gt;&lt;span class="wobble"&gt; &lt;/span&gt;&lt;span class="wobble"&gt;w&lt;/span&gt;&lt;span class="wobble"&gt;o&lt;/span&gt;&lt;span class="wobble"&gt;b&lt;/span&gt;&lt;span class="wobble"&gt;b&lt;/span&gt;&lt;span class="wobble"&gt;l&lt;/span&gt;&lt;span class="wobble"&gt;e&lt;/span&gt;&lt;/div&gt;</code></pre>
+          </details>
+</section>                
+
+<!-- TEXT STROKE SNIPPET -->
+<section class="snippetbox"> 
+          <div class="snippet">
+            <div class="tsb">
+              text stroke
+            </div>
+          </div>
+            <details>
+              <summary>View Code</summary>
+              <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.tsb {
+font-family:arial;
+font-size:2em;
+color:white;
+filter: drop-shadow(0px 1px black) drop-shadow(0 -1px black) drop-shadow(1px 0 black) drop-shadow(-1px 0 black);
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="tsb"&gt;
+text stroke
+&lt;/div&gt;</code></pre>
+            </details>
+</section>
+
+<!-- PRINCESS SNIPPET -->                
+<section class="snippetbox"> 
+            <div class="snippet">
+              <div class="prinzessin"><mark>p</mark><mark>r</mark><mark>i</mark><mark>n</mark><mark>c</mark><mark>e</mark><mark>s</mark><mark>s</mark></div>
+            </div>
+              <details>
+                <summary>View Code</summary>
+                <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.prinzessin mark { 
+font-family: arial;
+font-size:2em;
+font-weight:bold;
+background: none;
+color:black;
+animation: princess 2s infinite;
+animation-timing-function: cubic-bezier(0.25, 0.85, 0.4, 1);
+}
+
+.prinzessin mark:nth-child(1) { animation-delay:0s; display:inline-block;}
+.prinzessin mark:nth-child(2) { animation-delay:0.2s; display:inline-block;}
+.prinzessin mark:nth-child(3) { animation-delay:0.4s; display:inline-block; }
+.prinzessin mark:nth-child(4) { animation-delay:0.6s; display:inline-block;}
+.prinzessin mark:nth-child(5) { animation-delay:0.8s; display:inline-block;}
+.prinzessin mark:nth-child(6) { animation-delay:1s; display:inline-block;}
+.prinzessin mark:nth-child(7) { animation-delay:1.2s; display:inline-block;}
+.prinzessin mark:nth-child(8) { animation-delay:1.4s; display:inline-block;}
+.prinzessin mark:nth-child(9) { animation-delay:1.6s; display:inline-block;}
+.prinzessin mark:nth-child(10) { animation-delay:1.8s; display:inline-block;}
+
+@-webkit-keyframes princess {
+from { transform:scale(0.90); color:black; }
+50% { transform:scale(1); color:hotpink; }
+to { transform:scale(0.90); color:black; }
+}
+
+@keyframes princess {
+from { transform:scale(0.90); color:black; }
+50% { transform:scale(1); color:hotpink; }
+to { transform:scale(0.90); color:black; }
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="prinzessin"&gt;&lt;mark&gt;p&lt;/mark&gt;&lt;mark&gt;r&lt;/mark&gt;&lt;mark&gt;i&lt;/mark&gt;&lt;mark&gt;n&lt;/mark&gt;&lt;mark&gt;c&lt;/mark&gt;&lt;mark&gt;e&lt;/mark&gt;&lt;mark&gt;s&lt;/mark&gt;&lt;mark&gt;s&lt;/mark&gt;&lt;/div&gt;</code></pre>
+              </details>
+</section>
+
+<!-- 2 OUTLINES SNIPPET -->                
+<section class="snippetbox"> 
+              <div class="snippet">
+                <div class="twooutline">two outlines</div>
+              </div>
+                <details>
+                  <summary>View Code</summary>
+                  <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.twooutline {
+color: white;
+font-size: 2em;
+font-family:arial;
+font-weight:bold;
+filter: drop-shadow(0px 1px black) drop-shadow(0 -1px black) drop-shadow(1px 0 black) drop-shadow(-1px 0 black) drop-shadow(0px 1px hotpink) drop-shadow(0 -1px hotpink) drop-shadow(1px 0 hotpink) drop-shadow(-1px 0 hotpink);
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="twooutline"&gt;
+two outlines
+&lt;/div&gt;</code></pre>
+                </details>
+</section>
+      
+<!-- GRADIENT MASK SNIPPET -->
+<section class="snippetbox"> 
+                <div class="snippet">
+                  <div class="gradmask">gradient mask</div>
+                </div>
+                  <details>
+                    <summary>View Code</summary>
+                    <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.gradmask {
+background: linear-gradient(pink 50%, hotpink);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 2em;
+font-weight:bold;
+filter: drop-shadow(0px 1px black) drop-shadow(0 -1px black) drop-shadow(1px 0 black) drop-shadow(-1px 0 black);
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="gradmask"&gt;
+gradient mask
+&lt;/div&gt;</code></pre>
+                  </details>
+</section>
+
+<!-- GLOWING SNIPPET -->               
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="glowtext">glowing</div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.glowtext {
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-text-stroke-width: 1px;
+-webkit-text-stroke-color: #000;
+-webkit-animation: glow 2.0s linear infinite;
+animation: glow 2.0s linear infinite;
+font-size:2em;
+font-weight:bold;
+}
+
+@keyframes glow {
+0% { text-shadow: 0 0 15px pink; }
+50% { text-shadow: none; }
+100% { text-shadow: 0 0 15px pink; }
+}
+
+@-webkit-keyframes glow {
+0% { text-shadow: 0 0 15px pink; }
+50% { text-shadow: none; }
+100% { text-shadow: 0 0 15px pink; }
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="glowtext"&gt;
+glowing
+&lt;/div&gt;</code></pre>
+</details>
+</section>  
+
+<!-- TILTING SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="tilty">tilting</div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.tilty {
+text-align: center;
+font-size:2em;
+animation: tilt 1s infinite alternate;
+}
+
+@keyframes tilt {
+from { transform: rotate(5deg); }
+to { transform: rotate(-5deg); }
+}
+
+@-webkit-keyframes tilt {
+from { transform: rotate(5deg); }
+to { transform: rotate(-5deg); }
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="tilty"&gt;
+tilting
+&lt;/div&gt;</code></pre>
+</details>
+</section>    
+
+<!-- RISE HOVER SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="rise">rise on hover</div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.rise {
+width:fit-content;
+transition: .2s ease; 
+font-size:2em;
+}
+
+.rise:hover {
+transform: translateY(-20%);
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="rise"&gt;
+rise on hover
+&lt;/div&gt;</code></pre>
+</details>
+</section>  
+
+<!-- COL CHANGE SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="colchange">colour change on hover</div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.colchange {
+width:fit-content;
+transition: .2s ease; 
+color:black;
+font-size:2em;
+}
+
+.colchange:hover {
+color:hotpink;
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="colchange"&gt;
+colour change on hover
+&lt;/div&gt;</code></pre>
+</details>
+</section>
+    </div>
+    <div class="col">
+<!-- CSS BUBBLE SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="bubbler"><mark>c</mark><mark>s</mark><mark>s</mark> <mark>b</mark><mark>u</mark><mark>b</mark><mark>b</mark><mark>l</mark><mark>e</mark></div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.bubbler {
+font-size:2em;
+font-family:arial;
+}
+
+.bubbler mark { 
+animation: bubble 2s infinite;
+animation-timing-function: ease-in-out;
+background: none;
+color:black;
+}
+
+.bubbler mark:nth-child(1) { animation-delay:0s; display:inline-block;}
+.bubbler mark:nth-child(2) { animation-delay:0.8s; display:inline-block;}
+.bubbler mark:nth-child(3) { animation-delay:1.6s; display:inline-block; }
+.bubbler mark:nth-child(4) { animation-delay:2.4s; display:inline-block;}
+.bubbler mark:nth-child(5) { animation-delay:3.2s; display:inline-block;}
+.bubbler mark:nth-child(6) { animation-delay:4s; display:inline-block;}
+.bubbler mark:nth-child(7) { animation-delay:4.8s; display:inline-block;}
+.bubbler mark:nth-child(8) { animation-delay:5.6s; display:inline-block;}
+.bubbler mark:nth-child(9) { animation-delay:6.4s; display:inline-block;}
+.bubbler mark:nth-child(10) { animation-delay:7.2s; display:inline-block;}
+.bubbler mark:nth-child(11) { animation-delay:8s; display:inline-block;}
+.bubbler mark:nth-child(12) { animation-delay:8.8s; display:inline-block;}
+.bubbler mark:nth-child(13) { animation-delay:9.6s; display:inline-block;}
+.bubbler mark:nth-child(14) { animation-delay:10.4s; display:inline-block;}
+.bubbler mark:nth-child(15) { animation-delay:11.2s; display:inline-block;}
+.bubbler mark:nth-child(16) { animation-delay:12s; display:inline-block;}
+
+/* if you need more characters than 16 do this:
+- copy the line above
+- change the nth-child 16 to 17
+- add 0.8 to the animation delay number */
+
+@keyframes bubble {
+from { color:black; }
+50% { color:hotpink; }
+to { color:black; }
+}
+
+@-webkit-keyframes bubble {
+from { color:black; }
+50% { color:hotpink; }
+to { color:black; }
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="bubbler"&gt;
+&lt;mark&gt;l&lt;/mark&gt;&lt;mark&gt;a&lt;/mark&gt;&lt;mark&gt;y&lt;/mark&gt;&lt;mark&gt;e&lt;/mark&gt;&lt;mark&gt;r&lt;/mark&gt;&lt;mark&gt;c&lt;/mark&gt;&lt;mark&gt;a&lt;/mark&gt;&lt;mark&gt;k&lt;/mark&gt;&lt;mark&gt;e&lt;/mark&gt;
+&lt;/div&gt;</code></pre>
+</details>
+</section>
+
+<!-- PINK WAVE SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="pinkwave">WAVE</div>
+<a class="tutcen" href="/resources/snippets/guide/wave">how to change wave colour</a>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.pinkwave {
+font-size: 2em;
+font-weight: bold;
+font-family: arial;
+
+color: transparent;
+background: url("https://files.catbox.moe/db8ne8.png") repeat-x #fff;
+background-clip: border-box;
+background-size: 200% 100%;
+
+background-clip: text;
+-webkit-background-clip: text;
+transition: background-position-y 0.6s ease;
+-webkit-transition: background-position-y 0.6s ease;
+animation: waveAnimation 4s infinite linear;
+-webkit-animation: waveAnimation 4s infinite linear;
+
+-webkit-animation-play-state: running;
+animation-play-state: running;
+
+/* below just adds the outlines */
+filter: drop-shadow(1px 1px white) drop-shadow(-1px 1px white) drop-shadow(1px -1px white) drop-shadow(-1px -1px white)
+drop-shadow(1px 1px black) drop-shadow(-1px 1px black) drop-shadow(1px -1px black) drop-shadow(-1px -1px black);
+}
+
+@-webkit-keyframes waveAnimation{
+from { background-position-x: 0%; }
+to { background-position-x: 200%; }
+}
+
+@keyframes waveAnimation{
+from { background-position-x: 0%; }
+to { background-position-x: 200%; }
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="pinkwave"&gt;
+wave
+&lt;/div&gt;</code></pre>
+</details>
+</section>
+
+<!-- GRADIENT OUTLINE SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="gradoutline">gradient outline</div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.gradoutline {
+background: -webkit-linear-gradient(pink, hotpink);
+-webkit-background-clip: text;
+-webkit-text-stroke: 4px transparent;
+color: black;
+font-size: 2em;
+font-family:arial;
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="gradoutline"&gt;
+gradient outline
+&lt;/div&gt;</code></pre>
+</details>
+</section>
+
+<!-- IMAGE MASK SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="imagemask">image mask</div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.imagemask {
+background-image: url("https://64.media.tumblr.com/53c150a227ddcde4594fe65c54c009d7/fd75870c69147eae-67/s540x810/27604414e7ec6f144196ae64cc196b75aec6cc8f.gif");
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 2em;
+font-weight:bold;
+width:fit-content;
+margin:0 auto; /* this is to center, if needed */
+/* add below if you want an outline, if not remove */
+filter: drop-shadow(0px 1px black) drop-shadow(0 -1px black) drop-shadow(1px 0 black) drop-shadow(-1px 0 black);
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="imagemask"&gt;
+image mask
+&lt;/div&gt;</code></pre>
+</details>
+</section>
+
+<!-- FLOAT SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="float">floating</div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.float {
+font-size:2em;
+color: #000;
+animation-name: floating;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+0% { transform: translate(0, 0px); }
+50% { transform: translate(0, 15px); }
+100% { transform: translate(0, -0px); }
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="float"&gt;
+floating
+&lt;/div&gt;</code></pre>
+</details>
+</section>
+
+<!-- POP SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="pop">popping</div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.pop {
+font-size:2em;
+color: #000;
+text-align:center; /* looks weird often if not aligned in center */
+-webkit-animation: pop 1s ease-in-out infinite alternate;
+-moz-animation: pop 1s ease-in-out infinite alternate;
+animation: pop 1s ease-in-out infinite alternate;
+}
+
+@keyframes pop {
+from { transform:scale(0.95) }
+50% { transform:scale(1) }
+to { transform:scale(0.95) }
+}
+
+@-webkit-keyframes pop {
+from { -webkit-transform:scale(0.95) }
+50% { -webkit-transform:scale(1) }
+to { -webkit-transform:scale(0.95) }
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="pop"&gt;
+popping
+&lt;/div&gt;</code></pre>
+</details>
+</section>
+
+<!-- ROTATING GRADIENT SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="rotategrad">rotating gradient</div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.rotategrad {
+background-size: 100vw 100vw;
+margin: 0;
+position: relative;
+text-align: -webkit-center;
+font-size: 2em;
+background: repeating-linear-gradient(-45deg, hotpink 0%, lightblue 25%, hotpink 50%);
+-webkit-animation: 'slide' 30s infinite linear forwards;
+-webkit-text-fill-color: transparent;
+-webkit-background-clip: text;
+}
+
+@keyframes slide {
+0% { background-position-x: 0%; }
+100% { background-position-x: 200vw; }
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="rotategrad"&gt;
+rotating gradient
+&lt;/div&gt;</code></pre>
+</details>
+</section>
+
+<!-- BOLD ITALICS SNIPPET -->
+<section class="snippetbox"> 
+<div class="snippet">
+<div class="boldtal">bold italics on hover</div>
+</div>
+<details>
+<summary>View Code</summary>
+<span class="nomartop">CSS:</span>
+<pre><code class="language-css">.boldtal { 
+transition: .2s ease; 
+font-size:2em;
+} 
+
+.boldtal:hover { 
+font-weight:bold;
+font-style:italic;  
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="boldtal"&gt;
+bold italics on hover
+&lt;/div&gt;</code></pre>
+</details>
+</section>
+    </div>
+  </div>
+
+

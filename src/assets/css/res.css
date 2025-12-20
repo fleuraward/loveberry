@@ -1,0 +1,171 @@
+.col {
+	width: 50%;
+}
+.colfl {
+	gap: 10px;
+	display: flex;
+}
+.snippetbox {
+	border: 1px solid var(--foreground);
+	margin-bottom: 10px;
+}
+.snippetbox:last-child {
+	margin: 0;
+}
+.snippet {
+	padding: 6px;
+}
+
+.mar-bottom {
+	margin-bottom: 10px;
+}
+
+.ttmarby {
+	margin: 10px 0;
+	padding-left: 10px;
+}
+
+summary {
+	padding: 6px;
+	border-top: 1px solid var(--foreground);
+	background: var(--sumbg);
+	color: var(--sumtt);
+	font-weight: bold;
+	cursor: pointer;
+}
+details[open] summary {
+	border-bottom: 1px solid var(--foreground);
+}
+
+/* code copy */
+
+pre:has(code) {
+	position: relative;
+	overflow: auto;
+  }
+  
+  pre:has(code) button {
+	position: absolute;
+	top: 5px;
+	right: 15px;
+	padding: 4px 8px;
+	background-color: var(--background);
+	color:var(--foreground);
+	border:0;
+	border-radius: 5px;
+  }
+  
+  pre:has(code) button:hover {
+	cursor: pointer;
+	background-color: var(--accent);
+	color:var(--background);
+  }
+  
+/* HLJS STYLING */
+.martop {
+    margin: 8px 0;
+    margin-left: 4px;
+    display:block;
+}
+
+pre {
+	margin: 0;
+}
+
+pre code.hljs {
+	display: block;
+	padding: 10px;
+	white-space: pre-wrap;
+}
+code.hljs {
+	padding: 0;
+	margin: 0;
+}
+.hljs {
+	background: var(--foreground);
+	color: var(--background);
+	max-height: 300px;
+	overflow-y: auto;
+	font-size: 1.08rem;
+}
+
+.hljs {
+	scrollbar-width: auto;
+	scrollbar-color: var(--background) var(--foreground);
+}
+
+/* Chrome, Edge, and Safari */
+.hljs::-webkit-scrollbar {
+	width: 16px;
+}
+
+.hljs::-webkit-scrollbar-track {
+	background: var(--foreground);
+}
+
+.hljs::-webkit-scrollbar-thumb {
+	background-color: var(--background);
+	border: 3px solid var(--foreground);
+}
+.hljs-comment {
+	color: var(--hljsaccent4);
+}
+.hljs-punctuation,
+.hljs-tag,
+.hljs-tag .hljs-attr,
+.hljs-tag .hljs-name {
+	color: var(--hljsaccent3);
+}
+.hljs-attribute,
+.hljs-doctag,
+.hljs-keyword,
+.hljs-meta .hljs-keyword,
+.hljs-name,
+.hljs-selector-tag {
+	font-weight: 700;
+}
+.hljs-section,
+.hljs-title {
+	font-weight: 700;
+}
+.hljs-link,
+.hljs-operator,
+.hljs-regexp,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-symbol,
+.hljs-template-variable,
+.hljs-variable,
+.hljs-deletion,
+.hljs-number,
+.hljs-quote,
+.hljs-selector-class,
+.hljs-selector-id,
+.hljs-string,
+.hljs-template-tag,
+.hljs-type,
+.hljs-section,
+.hljs-title {
+	color: var(--hljsaccent);
+}
+.hljs-literal {
+	color: var(--hljsaccent2);
+}
+.hljs-addition,
+.hljs-built_in,
+.hljs-bullet,
+.hljs-code {
+	color: var(--hljsaccent2);
+}
+.hljs-meta {
+	color: #1f7199;
+}
+.hljs-meta .hljs-string {
+	color: #38a;
+}
+.hljs-emphasis {
+	font-style: italic;
+}
+.hljs-strong {
+	font-weight: 700;
+}

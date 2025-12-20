@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="darkreader-lock" content="">
+    <title>loveberry ♡ resources ♡ snippets</title>
+  <link rel="icon" type="image/x-icon" href="/assets/images/berry.ico">
+  <link rel="shortcut icon" href="/assets/images/berry.ico" type="image/x-icon">
+
+  <!-- METADATA -->
+  <meta name="description" content="loveberry - your home for website resources">
+  <meta name="theme-color" content="#f9a5b9">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/res.css">
+    <link rel="stylesheet" href="/assets/css/winmp.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- highlightr -->
+    <script src="https://loveberry.nekoweb.org/assets/js/hl.js"></script>
+</head>
+<body>
+<div class="sidebar">  
+
+  <div class="buttonadj">
+    <button type="button" data-theme-toggle aria-label="Change to light theme" class="decocorner"> </button>
+    <script>
+      /**
+      * Utility function to calculate the current theme setting.
+      * Look for a local storage value.
+      * Fall back to system setting.
+      * Fall back to light mode.
+      */
+      function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+        if (localStorageTheme !== null) {
+          return localStorageTheme;
+        }
+    
+        if (systemSettingDark.matches) {
+          return "dark";
+        }
+    
+        return "light";
+      }
+    
+      /**
+      * Utility function to update the button text, aria-label, and toggle class.
+      */
+      // Modified updateButton to accept an optional "animate" flag
+function updateButton({ buttonEl, isDark, animate = true }) {
+  const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+  buttonEl.setAttribute("aria-label", newCta);
+
+  if (animate) {
+    buttonEl.classList.remove("on", "off");
+    void buttonEl.offsetWidth;
+    buttonEl.classList.add(isDark ? "on" : "off");
+  } else {
+    // Ensure no animation classes are set initially
+    buttonEl.classList.remove("on", "off");
+  }
+}
+    
+      /**
+      * Utility function to update the theme setting on the html tag
+      */
+      function updateThemeOnHtmlEl({ theme }) {
+        document.querySelector("html").setAttribute("data-theme", theme);
+      }
+    
+      /**
+      * On page load:
+      */
+    
+      // 1. Grab what we need from the DOM and system settings on page load
+      const button = document.querySelector("[data-theme-toggle]");
+      const localStorageTheme = localStorage.getItem("theme");
+      const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+    
+      // 2. Work out the current site settings
+      let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+    
+      
+      // 3. Update the theme setting and button text/class according to current settings
+      updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark", animate: false });
+      updateThemeOnHtmlEl({ theme: currentThemeSetting });
+    
+      // 4. Add an event listener to toggle the 
+      button.addEventListener("click", () => {
+  const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+  localStorage.setItem("theme", newTheme);
+  updateButton({ buttonEl: button, isDark: newTheme === "dark", animate: true });
+  updateThemeOnHtmlEl({ theme: newTheme });
+
+  currentThemeSetting = newTheme;
+});
+    </script>
+    </div>
+<nav>
+<ul class="nav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/resources">Resources</a></li>
+    <li><a href="/links">Links</a></li>
+    <li><a href="https://layercake.nekoweb.org">Creator</a></li>
+</ul>
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var currentSlug = window.location.pathname;
+    if (!currentSlug.endsWith('/')) {
+      currentSlug += '/';
+    }
+
+    var navLinks = document.querySelectorAll('.nav a');
+
+    navLinks.forEach(function(link) {
+      var linkHref = link.getAttribute('href');
+      if (!linkHref.startsWith('/')) return;
+
+      if (!linkHref.endsWith('/')) {
+        linkHref += '/';
+      }
+      if (linkHref === '/' && currentSlug !== '/') return;
+      if (currentSlug.startsWith(linkHref)) {
+        link.parentElement.classList.add('activenavi');
+      }
+    });
+  });
+</script>
+
+
+<div class="foot">
+  <span style="font-weight:bold">(c) Loveberry 2023 - 2025</span> <br> <span style="font-weight:normal; font-style:italic">If things are broken, use CTRL + Shift + R or equivalent to refresh cache.</span>
+</div>
+</div>
+<div class="content">
+    <div class="main">
+        
+    <header>
+        
+        <div class="marquee">
+            <ul class="marquee__content">
+              <li><h1>Loveberry</h1></li>
+              <li aria-hidden="true"><h1>Loveberry</h1></li>
+              <li aria-hidden="true"><h1>Loveberry</h1></li>
+            </ul>
+            <!-- Mirrors the content above -->
+            <ul class="marquee__content" aria-hidden="true">
+              <li><h1>Loveberry</h1></li>
+              <li><h1>Loveberry</h1></li>
+              <li><h1>Loveberry</h1></li>
+            </ul>
+          </div>
+            </header>
+            <main>
+                <div class="mainb">
+                    <h2 class="grad italics">The Resources</h2>
+                    <p>To reduce lag, all resources are categorised within seperate pages! Please be aware that it may still be laggy and slow to load, sorry!</p>
+                    <div class="flex">
+                    <div class="activecheck">
+                      <a class="accentbox" href="/resources/box">
+                          <span class="resourcetitle">Boxes and Borders</span>
+                          <span class="subt">A bunch of fancy styled divs and such.</span>
+                      </a>
+                    </div>
+                      
+                    <div class="activecheck">
+                      <a class="accentbox" href="/resources/text">
+                          <span class="resourcetitle">Text Effects</span>
+                          <span class="subt">Fun text animatons.</span>
+                      </a>
+                    </div>
+
+                    <div class="activecheck">
+                      <a class="accentbox" href="/resources/snippets">
+                          <span class="resourcetitle">Snippets</span>
+                          <span class="subt">Misc code snippets, guides and more.</span>
+                      </a>
+                    </div>
+
+                      <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var currentSlug = window.location.pathname;
+                            if (!currentSlug.endsWith('/')) {
+                                currentSlug += '/';
+                            }
+                            var navLinks = document.querySelectorAll('.activecheck a');
+                            navLinks.forEach(function(link) {
+                                var linkHref = link.getAttribute('href');
+                                if (!linkHref.endsWith('/')) {
+                                    linkHref += '/';
+                                }
+                                if (linkHref === currentSlug) {
+                                    link.parentElement.classList.add('currenttab');
+                                }
+                            });
+                        });
+                      </script>
+                      </div>
+                    
+                    <h3 class="revgrad ttmarby">Guides</h3>
+
+<div class="flex marby">
+  <a class="guidesnip" href="/resources/snippets/guide/admin/">
+      <span class="resourcetitle">Comment Admin Mark</span>
+      <span class="subt">An admin mark identifier for Ayano's comment widget.</span>
+  </a>
+
+  <a class="guidesnip" href="/resources/snippets/guide/status/">
+      <span class="resourcetitle">Status Cafe Alterations</span>
+      <span class="subt">Quick guides on how to change what parts of the widget are displayed on your site (such as removing the username).</span>
+  </a>
+</div>
+
+
+<h3 class="revgrad ttmarby">Snippets</h3>
+
+<div class="note">
+    <div class="noteline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+        <span class="notett">Please Note:</span>
+    </div>
+    <p>The Nintendo Calendar has been removed, since the code is a sloppy mess and I hate it as well as troubleshooting it. Sorry.</p>
+</div>
+
+<!-- windows music player -->
+<section class="snippetbox"> 
+    <div class="snippet">    
+    
+    <div id="musicplayer">   
+        <div class="title-color">
+            <div class="actual-title">
+            <img src="https://loveberry.nekoweb.org/assets/musicplayer/player-icon.png" height="14px" width="14px"> CD Player
+            </div>
+            <div class="title-bar-controls">
+                <div class="window-button minimize"></div>
+                <div class="window-button maximize"></div>
+                <div class="window-button close"></div>
+            </div>
+        </div>
+        <div class="player-flex">
+            <div class="player-icon-holder">
+            <div class="player-icon"></div>
+            </div>
+            <div class="player-main">
+                 
+        <select class="track-select"></select>
+      <div class="controls">
+          <div class="seeking">
+              <div class="current-time">00:00</div>
+
+              <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+
+              <div class="total-duration">0:00</div>
+          </div>
+
+          <div class="player-buttons">
+              <button class="window-button prev-track" onclick="prevTrack()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-skip-back-icon lucide-skip-back"><path d="M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z"/><path d="M3 20V4"/></svg>
+              </button>
+
+              <button class="window-button playpause-track" onclick="playpauseTrack()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-icon lucide-play"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>
+              </button>
+
+              <button class="window-button next-track" onclick="nextTrack()">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-skip-forward-icon lucide-skip-forward"><path d="M21 4v16"/><path d="M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z"/></svg>
+              </button>
+          </div>
+      </div>
+
+            </div>
+        </div>
+
+      <audio id="music" src=""></audio>
+  </div>
+  
+        <script src="/assets/js/player.js"></script>
+    </div>
+    <details>
+      <summary>View Code</summary>
+      <span class="martop">CSS:</span>
+  <pre><code class="language-css">:root {
+        --titlebar-gradient: linear-gradient(90deg, #6a1535, #b23965, #f9a5b9);
+        --dialog-blue: #6a1535;
+        --dialog-accent: white; /* color of text on diaglog blue */
+        --titlebar-color: white; /* reccomended to change so its easy to read on titlebar color */
+        --player-image: url(https://loveberry.nekoweb.org/assets/images/mp/yuzuha.png);
+
+    /*** 98 css styling ***/
+    /* while some of these may specify a single element, theyre used across mulitple */
+        --surface: #c0c0c0;
+        --button-highlight: #ffffff;
+        --button-face: #dfdfdf;
+        --button-shadow: #808080;
+        --light-button-shadow: #a9a9a9;
+        --window-frame: #0a0a0a;
+        --border-field: inset -1px -1px var(--button-highlight),
+            inset 1px 1px var(--button-shadow), inset -2px -2px var(--button-face),
+            inset 2px 2px var(--window-frame);
+    }
+
+    @font-face {
+  font-family: "Pixelated MS Sans Serif";
+  src: url("https://files.catbox.moe/qgjjre.woff") format("woff");
+  src: url("https://files.catbox.moe/8fwbkl.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Pixelated MS Sans Serif";
+    src: url("https://files.catbox.moe/z7csle.woff") format("woff");
+    src: url("https://files.catbox.moe/moqhx6.woff2") format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    }
+
+    #musicplayer {
+  font-family: "Pixelated MS Sans Serif", Arial;
+  -webkit-font-smoothing: none;
+  font-size: 11px;
+  color:var(--window-frame);
+  width: fit-content;
+  border:var(--window-frame) solid 1px;
+  margin:0 auto;
+    box-shadow: inset -1px -1px var(--window-frame), inset 1px 1px var(--button-face), inset -2px -2px var(--button-shadow), inset 2px 2px var(--button-highlight);
+  background: var(--surface);
+  padding: 3px;
+  width: 260px;
+    }
+
+    .title-color {  
+  padding: 3px 2px 3px 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    background: var(--titlebar-gradient);
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+
+.actual-title {
+    color:var(--titlebar-color);
+  display: flex;
+  gap: 5px;
+}
+
+.seeking {
+    font-weight: normal;
+    font-size: 11px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    gap: 5px;
+    margin: 12px 0;
+}
+
+.player-flex {
+    display: flex;
+    gap: 3px;
+}
+
+.player-main {
+    width: calc(100% - 100px);
+    margin-top: 1px;
+}
+
+.player-icon-holder {
+  border: 2px solid var(--surface);
+  width:95px;
+  height:95px;
+  padding: 1px;
+  background-image:linear-gradient(-45deg, var(--button-face) 50%, var(--window-frame) 50%);
+  background-size:cover;
+  background-repeat:no-repeat;
+  border-width:1px;
+  border-style:solid;
+  border-color: var(--button-shadow) var(--button-highlight) var(--button-highlight) var(--button-shadow);
+  
+  overflow: hidden;
+  position:relative;
+  z-index: 2;
+}
+
+.player-icon {
+    background-image:var(--player-image);
+    background-size: contain;
+    background-repeat: no-repeat;
+  width:95px;
+  height:95px;
+  display: display;
+}
+
+/* BELOW IS LARGELY RIPPED FROM 98 CSS */
+.track-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: none;
+  border-radius:0;
+  box-sizing: border-box;
+  outline:0;
+  
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  position: relative;
+  padding: 3px 4px;
+  padding-right: 32px;
+  background-image: url("https://loveberry.nekoweb.org/assets/musicplayer/button-down.svg");
+  background-position: top 2px right 2px;
+  background-repeat: no-repeat;
+  width:100%;
+
+  box-shadow: var(--border-field);
+  background-color: var(--button-highlight);
+  height: 21px;
+
+  font-family: "Pixelated MS Sans Serif", Arial;
+  -webkit-font-smoothing: none;
+  font-size: 11px;
+  font-weight: lighter;
+}
+
+.track-select:focus {
+  color: var(--dialog-accent);
+  background-color: var(--dialog-blue);
+
+}
+.track-select:focus option {
+  color: var(--window-frame);
+  background-color: var(--button-highlight);  
+  outline: 1px;
+  border: none;
+}
+
+.track-select:active {
+  background-image: url("https://loveberry.nekoweb.org/assets/musicplayer/button-down-active.svg");
+}
+
+/* input */
+#musicplayer input[type="range"] {  
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+#musicplayer input[type="range"]:focus {
+  outline: none;
+}
+
+#musicplayer input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 21px;
+  width: 11px;
+  background: url("https://loveberry.nekoweb.org/assets/musicplayer/indicator-horizontal.svg");
+  transform: translateY(-8px);
+  box-shadow: none;
+  border: none;
+}
+
+#musicplayer input[type="range"].has-box-indicator::-webkit-slider-thumb {
+  background: url("https://loveberry.nekoweb.org/assets/musicplayer/indicator-rectangle-horizontal.svg");
+  transform: translateY(-10px);
+}
+
+#musicplayer input[type="range"]::-moz-range-thumb {
+  height: 21px;
+  width: 11px;
+  border: 0;
+  border-radius: 0;
+  background: url("https://loveberry.nekoweb.org/assets/musicplayer/indicator-horizontal.svg");
+  transform: translateY(2px);
+}
+
+#musicplayer input[type="range"].has-box-indicator::-moz-range-thumb {
+  background: url("https://loveberry.nekoweb.org/assets/musicplayer/indicator-rectangle-horizontal.svg");
+  transform: translateY(0px);
+}
+
+#musicplayer input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2px;
+  box-sizing: border-box;
+  background: var(--window-frame);
+  border-right: 1px solid var(--button-shadow);
+  border-bottom: 1px solid var(--button-shadow);
+  box-shadow: 1px 0 0 var(--button-highlight), 1px 1px 0 var(--button-highlight), 0 1px 0 var(--button-highlight), -1px 0 0 var(--light-button-shadow),
+    -1px -1px 0 var(--light-button-shadow), 0 -1px 0 var(--light-button-shadow), -1px 1px 0 var(--button-highlight), 1px -1px var(--light-button-shadow);
+}
+
+#musicplayer input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 2px;
+    box-sizing: border-box;
+    background: var(--window-frame);
+    border-right: 1px solid var(--button-shadow);
+    border-bottom: 1px solid var(--button-shadow);
+    box-shadow: 1px 0 0 var(--button-highlight), 1px 1px 0 var(--button-highlight), 0 1px 0 var(--button-highlight), -1px 0 0 var(--light-button-shadow),
+    -1px -1px 0 var(--light-button-shadow), 0 -1px 0 var(--light-button-shadow), -1px 1px 0 var(--button-highlight), 1px -1px var(--light-button-shadow);
+}
+
+.window-button {
+    background: var(--surface);
+    border: none;
+    border-radius: 0;
+    box-shadow: inset -1px -1px var(--window-frame),inset 1px 1px var(--button-highlight),inset -2px -2px var(--button-shadow),inset 2px 2px var(--button-face);
+    box-sizing: border-box;
+    color: inherit;
+    text-shadow: 0 0 var(--window-frame);
+}
+
+.window-button:active {
+  box-shadow: inset -1px -1px var(--button-highlight), inset 1px 1px var(--window-frame), inset -2px -2px var(--button-face), inset 2px 2px var(--button-shadow);
+  text-shadow: 1px 1px var(--window-frame);
+}
+
+.window-button:focus  {
+  outline: 1px dotted #000;
+  outline-offset: -4px;
+}
+.player-buttons {
+    display: flex;
+    gap: 10px;
+    margin: 5px 5px 0 5px;
+}
+.player-buttons .window-button  {
+    width: 33%;
+    font-size: 10px;
+    padding: 5px 10px;
+}
+.player-buttons .window-button svg {
+   width: 15px;
+   height: 15px;
+}
+
+.title-bar-controls {
+    display: flex;
+}
+.close {
+    margin-left: 2px;
+    background-image: url("https://loveberry.nekoweb.org/assets/musicplayer/close.svg");
+    background-repeat: no-repeat;
+    background-position: top 3px left 4px;
+
+    padding: 0;
+    display: block;
+    min-width: 16px;
+    min-height: 14px;
+}
+
+.minimize {
+  background-image: url("https://loveberry.nekoweb.org/assets/musicplayer/minimize.svg");
+  background-repeat: no-repeat;
+  background-position: bottom 3px left 4px;
+    padding: 0;
+    display: block;
+    min-width: 16px;
+    min-height: 14px;
+}
+
+.maximize {
+  background-image: url("https://loveberry.nekoweb.org/assets/musicplayer/maximize.svg");
+  background-repeat: no-repeat;
+  background-position: top 2px left 3px;
+    padding: 0;
+    display: block;
+    min-width: 16px;
+    min-height: 14px;
+}</code></pre>
+  
+  <span class="martop">HTML:</span>
+  <pre><code class="language-html">&lt;div id="musicplayer"&gt;   
+        &lt;div class="title-color"&gt;
+            &lt;div class="actual-title"&gt;
+            &lt;img src="https://loveberry.nekoweb.org/assets/musicplayer/player-icon.png" alt="" height="14px" width="14px"&gt; CD Player
+            &lt;/div&gt;
+            &lt;div class="title-bar-controls"&gt;
+                &lt;div class="window-button minimize"&gt;&lt;/div&gt;
+                &lt;div class="window-button maximize"&gt;&lt;/div&gt;
+                &lt;div class="window-button close"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="player-flex"&gt;
+            &lt;div class="player-icon-holder"&gt;
+            &lt;div class="player-icon"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="player-main"&gt;
+                 
+        &lt;select class="track-select"&gt;&lt;/select&gt;
+      &lt;div class="controls"&gt;
+          &lt;div class="seeking"&gt;
+              &lt;div class="current-time"&gt;00:00&lt;/div&gt;
+
+              &lt;input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()"&gt;
+
+              &lt;div class="total-duration"&gt;0:00&lt;/div&gt;
+          &lt;/div&gt;
+
+          &lt;div class="player-buttons"&gt;
+              &lt;button class="window-button prev-track" onclick="prevTrack()"&gt;
+              &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-skip-back-icon lucide-skip-back"&gt;&lt;path d="M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z"/&gt;&lt;path d="M3 20V4"/&gt;&lt;/svg&gt;
+              &lt;/button&gt;
+
+              &lt;button class="window-button playpause-track" onclick="playpauseTrack()"&gt;
+              &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-icon lucide-play"&gt;&lt;path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/&gt;&lt;/svg&gt;
+              &lt;/button&gt;
+
+              &lt;button class="window-button next-track" onclick="nextTrack()"&gt;
+              &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-skip-forward-icon lucide-skip-forward"&gt;&lt;path d="M21 4v16"/&gt;&lt;path d="M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z"/&gt;&lt;/svg&gt;
+              &lt;/button&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;audio id="music" src=""&gt;&lt;/audio&gt;
+  &lt;/div&gt;</code></pre>
+    
+<span class="martop">JS:</span>
+<pre><code class="language-js">// DEFINE YOUR SONGS HERE
+let track_list = [
+      {
+          name:"One Shot One Kill",
+          artist:"The Cat's Whiskers",
+          path:"https://files.catbox.moe/fegzmf.mp3"
+      },
+      {
+          name:"Shooting Arrows",
+          artist:"The Cat's Whiskers",
+          path:"https://files.catbox.moe/zj81lr.mp3"
+      },
+      {
+          name:"4 REAL",
+          artist:"The Cat's Whiskers",
+          path:"https://files.catbox.moe/fxd8fo.mp3"
+      },
+      {
+          name:"My Sweetest Love",
+          artist:"The Cat's Whiskers ft. Kazuma Mitchell",
+          path:"https://files.catbox.moe/qe4he5.mp3"
+      },
+      {
+          name:"Mercy On Me",
+          artist:"The Cat's Whiskers",
+          path:"https://files.catbox.moe/w7nnf9.mp3"
+      }
+  ];
+  
+// THATS ALL TY :3
+
+let now_playing = document.querySelector(".now-playing");
+let track_select = document.querySelector(".track-select");
+let playpause_btn = document.querySelector(".playpause-track");
+let seek_slider = document.querySelector(".seek_slider");
+let curr_time = document.querySelector(".current-time");
+let total_duration = document.querySelector(".total-duration");
+
+let track_index = 0;
+let isPlaying = false;
+let updateTimer;
+
+let curr_track = document.getElementById("music");
+
+function populateDropdown() {
+  if (!track_select) return;
+  track_select.innerHTML = "";
+  track_list.forEach((track, index) => {
+    const option = document.createElement("option");
+    option.value = index;
+    option.textContent = `${track.name} — ${track.artist}`;
+    track_select.appendChild(option);
+  });
+  track_select.value = track_index;
+}
+
+function loadTrack(track_index) {
+  clearInterval(updateTimer);
+  resetValues();
+
+  curr_track.src = track_list[track_index].path;
+  curr_track.load();
+
+  if (now_playing) now_playing.textContent = (track_index + 1) + " / " + track_list.length;
+
+  updateTimer = setInterval(seekUpdate, 1000);
+  curr_track.addEventListener("ended", nextTrack);
+
+  if (track_select) track_select.value = track_index;
+}
+
+function resetValues() {
+  curr_time.textContent = "0:00";
+  total_duration.textContent = "0:00";
+  seek_slider.value = 0;
+}
+
+if (track_select) {
+  track_select.addEventListener("change", function() {
+    track_index = parseInt(this.value);
+    loadTrack(track_index);
+    playTrack();
+  });
+}
+
+function playpauseTrack() {
+  if (!isPlaying) playTrack();
+  else pauseTrack();
+}
+
+function playTrack() {
+  curr_track.play();
+  isPlaying = true;
+  playpause_btn.innerHTML = `
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+    viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round"
+    class="lucide lucide-pause-icon"&gt;&lt;rect x="14" y="3" width="5" height="18" rx="1"/&gt;&lt;rect x="5" y="3" width="5" height="18" rx="1"/&gt;&lt;/svg&gt;`;
+}
+
+function pauseTrack() {
+  curr_track.pause();
+  isPlaying = false;
+  playpause_btn.innerHTML = `
+    &lt;svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+    viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2"
+    stroke-linecap="round" stroke-linejoin="round"
+    class="lucide lucide-play-icon"&gt;&lt;path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003
+    3.458l-12 7A2 2 0 0 1 5 19z"/&gt;&lt;/svg&gt;`;
+}
+
+function nextTrack() {
+  if (track_index < track_list.length - 1) track_index += 1;
+  else track_index = 0;
+  loadTrack(track_index);
+  playTrack();
+}
+
+function prevTrack() {
+  if (track_index > 0) track_index -= 1;
+  else track_index = track_list.length - 1;
+  loadTrack(track_index);
+  playTrack();
+}
+
+function seekTo() {
+  seekto = curr_track.duration * (seek_slider.value / 100);
+  curr_track.currentTime = seekto;
+}
+
+function seekUpdate() {
+  let seekPosition = 0;
+  if (!isNaN(curr_track.duration)) {
+    seekPosition = curr_track.currentTime * (100 / curr_track.duration);
+    seek_slider.value = seekPosition;
+
+    let currentMinutes = Math.floor(curr_track.currentTime / 60);
+    let currentSeconds = Math.floor(curr_track.currentTime - currentMinutes * 60);
+    let durationMinutes = Math.floor(curr_track.duration / 60);
+    let durationSeconds = Math.floor(curr_track.duration - durationMinutes * 60);
+
+    if (currentSeconds < 10) currentSeconds = "0" + currentSeconds;
+    if (durationSeconds < 10) durationSeconds = "0" + durationSeconds;
+
+    curr_time.textContent = currentMinutes + ":" + currentSeconds;
+    total_duration.textContent = durationMinutes + ":" + durationSeconds;
+  }
+}
+
+populateDropdown();
+loadTrack(track_index);</code></pre>
+    </details>
+    
+  </section>
+                </div>
+</main>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      document.querySelectorAll("pre code").forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+  </script>
+  
+  <script src="https://loveberry.nekoweb.org/assets/js/copy.js"></script>
+</body>
+</html>

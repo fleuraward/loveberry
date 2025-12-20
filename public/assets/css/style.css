@@ -1,0 +1,515 @@
+    [data-theme="light"],
+:root {
+	--background: #fae3d7;
+	--foreground: #380f1e;
+    --link: #7c133a;
+    --linkaccent:#32101d;
+    --notett: #6a1535;
+	--accent: #f8569170;
+	--accent70: #f8569170;
+	--accent40: #f8569140;
+	--accent20: #f8569120;
+	--accent10: #f8569110;
+	--accent02: #f8569102;
+	--accent05: #f9a5b9;
+	--sumbg: #f8569170;
+	--sumtt: #380f1e;
+	--hljsaccent: #f575a4;
+	--hljsaccent2: #c5b2f5;
+	--hljsaccent3: #b0b0b0;
+	--hljsaccent4: #97bfec;
+  --searchfocus:#df0085;
+  --searchborder:var(--foreground);
+    --bulb:url(https://loveberry.nekoweb.org/assets/images/darkbulb.png);
+    --light: transparent;
+    --backgrounddark: #ebd0c2;
+}
+
+[data-theme="dark"] {
+  --linkaccent: #fadce6;
+	--background: #380f1e;
+	--foreground: #fae3d7;
+	--link: #f3b0c8;
+  --notett: #df9fb7;
+	--accent70: #f8569170;
+	--accent05: #2b0d18;
+	--sumbg: #f8569170;
+	--sumtt: #fef9f6;
+	--hljsaccent: #840634;
+	--hljsaccent2: #4719be;
+	--hljsaccent3: #3d3d3d;
+	--hljsaccent4: #241e99;
+  --searchfocus:#df0085;
+  --searchborder:var(--foreground);
+    --bulb:url(https://loveberry.nekoweb.org/assets/images/lightbulb.png);
+    --light: var(--foreground);
+    --backgrounddark: #1c070f;
+}
+
+
+@media (prefers-color-scheme: dark) {
+	[data-theme="dark"],
+	:root {
+    --linkaccent: #fadce6;
+		--background: #380f1e;
+		--foreground: #fae3d7;
+		--link: #f3b0c8;
+    --notett: #df9fb7;
+		--accent70: #f8569170;
+    --accent05: #2b0d18;
+	--accent20: #f8569120;
+		--sumbg: #f8569170;
+		--sumtt: #fef9f6;
+		--hljsaccent: #840634;
+		--hljsaccent2: #4719be;
+		--hljsaccent3: #3d3d3d;
+		--hljsaccent4: #241e99;
+    --searchfocus:#df0085;
+    --searchborder:var(--foreground);
+        --bulb:url(https://loveberry.nekoweb.org/assets/images/lightbulb.png);
+        --light: var(--foreground);
+        --backgrounddark: #1c070f;
+	}
+
+	[data-theme="light"] {
+    --linkaccent:#32101d;
+		--background: #fae3d7;
+		--foreground: #380f1e;
+		--link: #7b2444;
+    --notett: #6a1535;
+		--accent70: #f8569170;
+    --accent05: #f9a5b9;
+		--sumbg: #f8569170;
+		--sumtt: #380f1e;
+		--hljsaccent: #f575a4;
+		--hljsaccent2: #c5b2f5;
+		--hljsaccent3: #b0b0b0;
+		--hljsaccent4: #97bfec;
+    --searchfocus:#df0085;
+    --searchborder:var(--foreground);
+        --bulb:url(https://loveberry.nekoweb.org/assets/images/darkbulb.png);
+        --light: transparent;
+        --backgrounddark: #ebd0c2;
+	}
+}
+
+* {
+    box-sizing: border-box;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--searchfocus);
+}
+
+body {
+    background:var(--background);
+    margin:0;
+    color:var(--foreground);
+    font-size: 1.15rem;
+    font-family: "Atkinson Hyperlegible", serif;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  background: linear-gradient(var(--background) 20%, var(--accent70));
+  border-right: 1px solid var(--foreground);
+}
+
+.foot {
+  width: 200px;
+  bottom:0;
+  position:fixed;
+  text-align: center;
+  padding: 5px;
+  color:var(--foreground);
+  font-size: 0.93rem;
+}
+
+code {
+  font-family: inherit;
+  font-size:inherit;
+}
+.new {
+    color:var(--notett);
+    font-weight:bold;
+}
+
+.content {
+  margin-left: 200px;
+}
+
+.outbound {
+  display: inline;
+}
+.outbound::after {
+  content: " \2924";
+}
+
+.afterinbound::after{     
+  content: " \2192";
+}
+
+.inbound::before{     
+  content: "\2192";
+}
+
+.back::before {
+  content: "\2190 ";
+}
+
+header {    
+  border-bottom: 1px solid var(--foreground);
+  background:var(--background);
+  height: 70px;
+  position: sticky;
+  top:0;
+  z-index: 9;
+}
+
+h1 {
+  font-size: 3.1rem;
+  font-family: "Atkinson Hyperlegible", serif;
+  color:var(--foreground);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin:0;
+}
+
+h2, h3, h4, h5, h6, .resourcetitle {
+    font-weight: normal;
+    font-size:1.3rem;
+}
+
+.faketitlelink {
+    font-size:1.16rem;
+}
+
+a { color:var(--link); }
+a:hover, .nav li a:hover { color:var(--linkaccent); }
+
+.resourcetitle {
+    display: block;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.subt {
+    font-style: italic;
+    color:var(--foreground);
+}
+
+.italics {
+    font-style: italic;
+}
+
+.monthupd {
+  text-decoration: underline;
+}
+
+/* Marquee styles */
+.marquee {
+  --gap: 50px;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll 20s linear infinite;
+  text-transform: uppercase;
+}
+
+.marquee ul, .marquee li {
+margin:0;
+padding:0;
+list-style:none;
+}
+
+ol, ol li {
+  margin: 10px;
+  padding-left: 5px;
+}
+
+.nodecolist {
+  list-style:none;
+}
+
+mark {
+  color:var(--foreground);
+  background:var(--accent40);
+}
+
+.decocorner {
+  position: relative;
+  z-index: 99;
+margin:0 auto;
+display:block;
+z-index: 1;
+background-image:var(--bulb);
+background-color: Transparent;
+background-position: bottom;
+border:0;
+height:200px;
+width:76px;
+cursor:pointer;
+filter:drop-shadow(var(--light) 0 0 10px) drop-shadow(var(--light) 0 0 3px);
+transition: filter ease-in-out;
+}
+
+.buttonadj {
+  height:240px;
+  position: relative;
+}
+
+.nav {
+  position:relative;
+  top: -10px;
+}
+
+.on, .off {
+  animation-name: pull;
+  animation-duration: 1.2s;
+  animation-timing-function: ease;
+}
+
+  @keyframes pull {
+    from {
+      height:200px;
+    }
+    50% {        
+      height:240px;
+    }
+    to {
+      height:200px;
+    }
+  }
+
+main {
+    padding: 15px;
+    height: fit-content;
+    z-index: 7;
+}
+
+.mainb {  
+    border: var(--foreground) 1px solid;
+    width: 100%;
+    height: fit-content;
+    background: var(--background);
+    box-shadow: var(--accent70) 0 0 12px;
+    padding: 10px;
+}
+
+.nav {
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+
+.nav li a {
+    display:block;
+    width:100%;
+    text-align: center;
+    margin-top: 20px;
+    font-family: "Atkinson Hyperlegible", serif;
+    font-size: 1.38rem;
+    color:var(--link);
+}
+
+.activenavi {
+  font-weight: bold;
+}
+
+.nav li:last-child {
+    margin-bottom: 20px;
+}
+
+.marby {
+    margin-bottom: 10px;
+}
+
+.Lmarby {
+  margin-bottom: 30px;
+}
+
+.grad {
+    width: 100%;
+  color: var(--foreground);
+  background: linear-gradient(to right, var(--background), var(--accent70));
+}
+
+.revgrad {  width: 100%;
+  color: var(--foreground);
+  background: linear-gradient(to left, var(--background), var(--accent70));
+}
+
+.fl, .flex {
+    display:flex;
+    width: 100%;
+}
+
+.flex { 
+  gap: 10px;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+.activecheck {
+  width:100%;
+  border-radius: 10px;
+}
+
+.accentbox {
+    text-decoration: none;    
+    color:var(--link);
+    background:var(--accent20);
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid var(--foreground);
+    width:100%;
+    display: block;
+}
+
+.accentbox:hover {
+  background:var(--accent05);
+  color:var(--linkaccent);
+}
+
+.guidesnip {
+  text-decoration: none;    
+  color:var(--link);
+  background:var(--accent02);
+  padding: 5px;
+  border: 1px solid var(--foreground);
+  width:100%;
+  display: block;
+}
+
+.guidesnip:hover {
+background:var(--accent20);
+color:var(--linkaccent);
+}
+
+.currenttab {
+  background:var(--link);
+  color:var(--background);
+}
+
+.currenttab span {
+  color:var(--background);
+}
+
+.currenttab:hover span {
+  color:inherit;
+}
+
+.note {
+  background: var(--accent10);
+  transition: background 1s;
+  margin: 10px 0;
+  padding: 5px;
+  color:var(--notett);
+  border: 1px solid var(--foreground);
+}
+
+.noteline {
+  width: 100%;
+  gap: 10px;
+  display: flex;
+}
+
+.note p {
+    margin:0;
+    margin-top: 10px;
+}
+
+.notett {
+  font-weight: normal;
+}
+
+.guideimage {
+  width: 60%;
+  max-width: 100%;
+  height:auto;
+}
+
+hr {
+  border-color:var(--foreground);
+}
+
+.fakearea {
+  border: 1px solid var(--foreground);
+  padding: 4px;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+/* Pause animation when reduced-motion is set */
+@media (prefers-reduced-motion: reduce) {
+  .marquee__content {
+    animation-play-state: paused !important;
+  }
+}
+
+.mobileinline {
+  display: none ;
+}
+
+@media screen and (max-width: 1030px) {
+  .sidebar {
+    width: 100%;
+    height: fit-content;
+    min-height: 100px;
+    position: relative;
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid var(--foreground);
+  }
+
+  header {
+    position:static;
+  }
+  
+  .content {margin-left: 0;}
+
+  .flex {
+    flex-wrap: wrap;
+  }
+
+  
+.guideimage {
+  width:100%;
+}
+
+.foot {
+  width: 100%;
+  bottom:0;
+  position:static;
+  text-align: center;
+  padding: 5px;
+  color:var(--foreground);
+  font-size: 1rem;
+}
+
+.mobileinline {
+  display: inline-block;
+}
+
+}

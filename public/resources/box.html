@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="darkreader-lock" content="">
+    <title>loveberry ♡ resources ♡ boxes and borders</title>
+  <link rel="icon" type="image/x-icon" href="/assets/images/berry.ico">
+  <link rel="shortcut icon" href="/assets/images/berry.ico" type="image/x-icon">
+
+  <!-- METADATA -->
+  <meta name="description" content="loveberry - your home for website resources">
+  <meta name="theme-color" content="#f9a5b9">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/res.css">
+    <link rel="stylesheet" href="/assets/css/box.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <!-- highlightr -->
+    <script src="https://loveberry.nekoweb.org/assets/js/hl.js"></script>
+</head>
+<body>
+<div class="sidebar">  
+
+  <div class="buttonadj">
+    <button type="button" data-theme-toggle aria-label="Change to light theme" class="decocorner"> </button>
+    <script>
+      /**
+      * Utility function to calculate the current theme setting.
+      * Look for a local storage value.
+      * Fall back to system setting.
+      * Fall back to light mode.
+      */
+      function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+        if (localStorageTheme !== null) {
+          return localStorageTheme;
+        }
+    
+        if (systemSettingDark.matches) {
+          return "dark";
+        }
+    
+        return "light";
+      }
+    
+      /**
+      * Utility function to update the button text, aria-label, and toggle class.
+      */
+      // Modified updateButton to accept an optional "animate" flag
+function updateButton({ buttonEl, isDark, animate = true }) {
+  const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+  buttonEl.setAttribute("aria-label", newCta);
+
+  if (animate) {
+    buttonEl.classList.remove("on", "off");
+    void buttonEl.offsetWidth;
+    buttonEl.classList.add(isDark ? "on" : "off");
+  } else {
+    // Ensure no animation classes are set initially
+    buttonEl.classList.remove("on", "off");
+  }
+}
+    
+      /**
+      * Utility function to update the theme setting on the html tag
+      */
+      function updateThemeOnHtmlEl({ theme }) {
+        document.querySelector("html").setAttribute("data-theme", theme);
+      }
+    
+      /**
+      * On page load:
+      */
+    
+      // 1. Grab what we need from the DOM and system settings on page load
+      const button = document.querySelector("[data-theme-toggle]");
+      const localStorageTheme = localStorage.getItem("theme");
+      const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+    
+      // 2. Work out the current site settings
+      let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+    
+      
+      // 3. Update the theme setting and button text/class according to current settings
+      updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark", animate: false });
+      updateThemeOnHtmlEl({ theme: currentThemeSetting });
+    
+      // 4. Add an event listener to toggle the 
+      button.addEventListener("click", () => {
+  const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+  localStorage.setItem("theme", newTheme);
+  updateButton({ buttonEl: button, isDark: newTheme === "dark", animate: true });
+  updateThemeOnHtmlEl({ theme: newTheme });
+
+  currentThemeSetting = newTheme;
+});
+    </script>
+    </div>
+<nav>
+<ul class="nav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/resources">Resources</a></li>
+    <li><a href="/links">Links</a></li>
+    <li><a href="https://layercake.nekoweb.org">Creator</a></li>
+</ul>
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var currentSlug = window.location.pathname;
+    if (!currentSlug.endsWith('/')) {
+      currentSlug += '/';
+    }
+
+    var navLinks = document.querySelectorAll('.nav a');
+
+    navLinks.forEach(function(link) {
+      var linkHref = link.getAttribute('href');
+      if (!linkHref.startsWith('/')) return;
+
+      if (!linkHref.endsWith('/')) {
+        linkHref += '/';
+      }
+      if (linkHref === '/' && currentSlug !== '/') return;
+      if (currentSlug.startsWith(linkHref)) {
+        link.parentElement.classList.add('activenavi');
+      }
+    });
+  });
+</script>
+
+
+<div class="foot">
+  <span style="font-weight:bold">(c) Loveberry 2023 - 2025</span> <br> <span style="font-weight:normal; font-style:italic">If things are broken, use CTRL + Shift + R or equivalent to refresh cache.</span>
+</div>
+</div>
+<div class="content">
+    <div class="main">
+        
+    <header>
+        
+        <div class="marquee">
+            <ul class="marquee__content">
+              <li><h1>Loveberry</h1></li>
+              <li aria-hidden="true"><h1>Loveberry</h1></li>
+              <li aria-hidden="true"><h1>Loveberry</h1></li>
+            </ul>
+            <!-- Mirrors the content above -->
+            <ul class="marquee__content" aria-hidden="true">
+              <li><h1>Loveberry</h1></li>
+              <li><h1>Loveberry</h1></li>
+              <li><h1>Loveberry</h1></li>
+            </ul>
+          </div>
+            </header>
+            <main>
+                <div class="mainb">
+                    <h2 class="grad italics">The Resources</h2>
+                    <p>To reduce lag, all resources are categorised within seperate pages! Please be aware that it may still be laggy and slow to load, sorry!</p>
+                    <div class="flex">
+                    <div class="activecheck">
+                      <a class="accentbox" href="/resources/box">
+                          <span class="resourcetitle">Boxes and Borders</span>
+                          <span class="subt">A bunch of fancy styled divs and such.</span>
+                      </a>
+                    </div>
+                      
+                    <div class="activecheck">
+                      <a class="accentbox" href="/resources/text">
+                          <span class="resourcetitle">Text Effects</span>
+                          <span class="subt">Fun text animatons.</span>
+                      </a>
+                    </div>
+
+                    <div class="activecheck">
+                      <a class="accentbox" href="/resources/snippets">
+                          <span class="resourcetitle">Snippets</span>
+                          <span class="subt">Misc code snippets, guides and more.</span>
+                      </a>
+                    </div>
+
+                      <script>
+                        document.addEventListener('DOMContentLoaded', function () {
+                            var currentSlug = window.location.pathname;
+                            if (!currentSlug.endsWith('/')) {
+                                currentSlug += '/';
+                            }
+                            var navLinks = document.querySelectorAll('.activecheck a');
+                            navLinks.forEach(function(link) {
+                                var linkHref = link.getAttribute('href');
+                                if (!linkHref.endsWith('/')) {
+                                    linkHref += '/';
+                                }
+                                if (linkHref === currentSlug) {
+                                    link.parentElement.classList.add('currenttab');
+                                }
+                            });
+                        });
+                      </script>
+                      </div>
+                    
+                    <h3 class="revgrad ttmarby">Boxes and borders</h3>
+<div class="colfl">
+  <div class="col">
+    <section class="snippetbox"> 
+    <div class="snippet">
+        <div class="bg"><div class="inner">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+        </div></div>
+    </div>
+      <details>
+        <summary>View Code</summary>
+        <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.bg, .inner { box-sizing: border-box;}
+
+.bg {
+/* for plain background */
+background: #FE82B624;
+
+/* vv for image background. remove if want plain */
+background-image:url(https://i.imgur.com/Wy0Pm6R.jpg);
+background-size:cover;
+
+padding:12px; /* make number bigger/smaller for a bigger/smaller border */
+width:100%;
+border:1px solid black;
+}
+
+.inner {
+background: #FFF;
+color: #000;
+padding:5px;
+border:1px solid black;
+height:200px; /* set height to "height:fit-content;" to expand with text size */
+overflow-y:auto; /* remove overflow if you don't want a scroll */
+}
+</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="bg">&lt;div class="inner">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.</p>
+&lt;/div>&lt;/div></code></pre>
+      </details>
+    </section>
+    
+    <section class="snippetbox"> 
+        <div class="snippet">
+            <div class="bwindow">
+                <div class="btitle-bar">
+                  <div class="btitle-bar-text">A Window With Stuff In It</div>
+                  <div class="btitle-bar-controls">
+                    <button aria-label="Minimize"></button>
+                    <button aria-label="Maximize"></button>
+                    <button aria-label="Close"></button>
+                  </div>
+                </div>
+                <div class="bwindow-body">
+                  <div class="bfieldset">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.<br><br>
+              
+              Duis pharetra malesuada fermentum. Donec pellentesque metus id lectus imperdiet tristique. In semper, velit et porta vulputate, ex neque aliquam lacus, nec lacinia magna est sit amet est. Vestibulum sit amet lacinia nisl. Aliquam erat volutpat. Integer pulvinar lectus id turpis pretium, non convallis urna pharetra. Nulla pulvinar quam non risus lobortis, non faucibus orci elementum. Nullam sed justo mi. Cras posuere, velit sed tincidunt placerat, justo ex gravida sem, ut viverra mi tellus sed erat. Proin sollicitudin felis dolor. Phasellus et arcu molestie, blandit diam scelerisque, fermentum elit. Sed et lectus non est dignissim gravida ut sed mauris.<br><br>
+              
+              Phasellus sit amet lacus nulla. Quisque scelerisque lacus vel quam dapibus, scelerisque faucibus nisl auctor. Donec gravida molestie nisl, et aliquam est suscipit id. Maecenas a porta magna. Nulla at condimentum lacus. Vivamus ultricies sem vel dolor imperdiet porttitor. Suspendisse orci odio, molestie in augue sed, bibendum interdum urna. Mauris maximus nisi et sapien pharetra, sed consequat enim convallis. Aenean dictum ligula at auctor laoreet. Donec elementum dui vitae tortor venenatis, sed pretium eros semper. Morbi semper malesuada ipsum sit amet tincidunt. Donec iaculis iaculis pretium.
+              </div>
+                </div>
+              </div>
+        </div>
+          <details>
+            <summary>View Code</summary>
+            <span class="nomartop">CSS:</span>
+<pre><code class="language-css">/*A vast majority of this styling comes from 98.css code, if you're making a full windows 98 theme, I suggest you use the stylesheet this is sourced from - https://jdan.github.io/98.css/ */
+
+.title-bar-controls button {
+border:none;
+border-radius:0;
+box-sizing:border-box;
+color:transparent;
+min-height:23px;
+min-width:75px;
+padding:0 12px;
+text-shadow:0 0 #222;
+}
+
+.title-bar-controls button {
+background:silver;
+box-shadow:inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+}
+
+.title-bar-controls button:not(:disabled):active {
+box-shadow:inset -1px -1px #fff, inset 1px 1px #0a0a0a, inset -2px -2px #dfdfdf, inset 2px 2px grey;
+text-shadow:1px 1px #222;
+}
+
+@media (not(hover)){
+button:not(:disabled):hover {
+box-shadow:inset -1px -1px #fff,inset 1px 1px #0a0a0a,inset -2px -2px #dfdfdf,inset 2px 2px grey}
+}
+
+.title-bar-controls button:focus {
+outline:1px dotted #000;
+outline-offset:-4px;
+}
+
+.title-bar-controls button::-moz-focus-inner { border:0 }
+    
+@font-face {
+font-family: "Pixelated MS Sans Serif";
+src: url("https://files.catbox.moe/1za99g.woff") format("woff");
+src: url("https://files.catbox.moe/8fwbkl.woff2") format("woff2");
+font-weight: normal;
+font-style: normal;
+}   
+
+.window, .title-bar {
+font-family: "Pixelated MS Sans Serif", Arial;
+-webkit-font-smoothing: none;
+font-size: 11px;
+}
+
+.window {
+box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px #808080, inset 2px 2px #ffffff;
+background: #c0c0c0;
+color:#000;
+padding: 3px;
+width:100%;
+}
+
+.title-bar {
+background:linear-gradient(90deg, purple, orchid, pink);
+padding: 3px 2px 3px 3px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.title-bar-text {
+font-weight: bold;
+color: white;
+letter-spacing: 0;
+margin-right: 24px;
+}
+
+.title-bar-controls {
+display: flex;
+}
+
+.title-bar-controls button {
+padding: 0;
+display: block;
+min-width: 16px;
+min-height: 14px;
+}
+
+.title-bar-controls button:active {
+padding: 0;
+}
+
+.title-bar-controls button:focus {
+outline: none;
+}
+
+.title-bar-controls button[aria-label=Minimize]{
+background-image:url("https://raw.githubusercontent.com/jdan/98.css/main/icon/minimize.svg");
+background-position:bottom 3px left 4px;
+background-repeat:no-repeat
+}
+
+.title-bar-controls button[aria-label=Maximize]{
+background-image:url("https://raw.githubusercontent.com/jdan/98.css/4a2282dd9170cabf730fb5803d1153d86b2e94e3/icon/maximize.svg");
+background-position:top 2px left 3px;
+background-repeat:no-repeat;
+}
+
+.title-bar-controls button[aria-label=Close]{
+background-image:url("https://raw.githubusercontent.com/jdan/98.css/main/icon/close.svg");
+background-position:top 3px left 4px;
+background-repeat:no-repeat;
+margin-left:2px;
+}
+
+.window-body {
+margin: 8px;
+}
+
+/* literally only part ive custom coded so it scrolls . i also like the effect the fieldset adds */
+.fieldset {
+border:1px gray solid;
+box-shadow: white 1px 1px 0px inset, white 1px 1px 0px, white 0px 1px 0px, white 1px 0px 0px;
+margin:0;
+padding:10px;
+overflow-y:auto; 
+height: 190px;
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="window"&gt;
+&lt;div class="title-bar"&gt;
+&lt;div class="title-bar-text"&gt;A Window With Stuff In It&lt;/div&gt;
+&lt;div class="title-bar-controls"&gt;
+&lt;button aria-label="Minimize"&gt;&lt;/button&gt;
+&lt;button aria-label="Maximize"&gt;&lt;/button&gt;
+&lt;button aria-label="Close"&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="window-body"&gt;
+&lt;div class="fieldset"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.&lt;br&gt;&lt;br&gt;
+
+Duis pharetra malesuada fermentum. Donec pellentesque metus id lectus imperdiet tristique. In semper, velit et porta vulputate, ex neque aliquam lacus, nec lacinia magna est sit amet est. Vestibulum sit amet lacinia nisl. Aliquam erat volutpat. Integer pulvinar lectus id turpis pretium, non convallis urna pharetra. Nulla pulvinar quam non risus lobortis, non faucibus orci elementum. Nullam sed justo mi. Cras posuere, velit sed tincidunt placerat, justo ex gravida sem, ut viverra mi tellus sed erat. Proin sollicitudin felis dolor. Phasellus et arcu molestie, blandit diam scelerisque, fermentum elit. Sed et lectus non est dignissim gravida ut sed mauris.&lt;br&gt;&lt;br&gt;
+
+Phasellus sit amet lacus nulla. Quisque scelerisque lacus vel quam dapibus, scelerisque faucibus nisl auctor. Donec gravida molestie nisl, et aliquam est suscipit id. Maecenas a porta magna. Nulla at condimentum lacus. Vivamus ultricies sem vel dolor imperdiet porttitor. Suspendisse orci odio, molestie in augue sed, bibendum interdum urna. Mauris maximus nisi et sapien pharetra, sed consequat enim convallis. Aenean dictum ligula at auctor laoreet. Donec elementum dui vitae tortor venenatis, sed pretium eros semper. Morbi semper malesuada ipsum sit amet tincidunt. Donec iaculis iaculis pretium.
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+        </section>
+        
+    <section class="snippetbox"> 
+        <div class="snippet">
+            <div class="popbox">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+            </div>
+        </div>
+          <details>
+            <summary>View Code</summary>
+            <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.popbox {
+box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 56%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+filter: drop-shadow(0px 0px 1px #424242);
+-webkit-filter: drop-shadow(0px 0px 1px #424242);
+background:white;
+color:black;
+width:calc(100% - 20px);
+height:fit-content;
+max-height:190px;
+overflow-y:auto;
+border-radius:10px;
+padding:8px 10px 10px 10px;
+box-sizing:border box;
+margin:0 auto;
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="popbox"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+&lt;/div&gt;</code></pre>
+          </details>
+        </section>
+
+        <section class="snippetbox"> 
+            <div class="snippet">
+                <div class="whitecloudybox"><div class="whitecloudyfull">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+                </div></div>
+            </div>
+              <details>
+                <summary>View Code</summary>
+                <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.whitecloudybox {
+height: 140px;
+width: 100%;
+border: 10px solid transparent;
+box-sizing: border-box;
+border-image: url(https://i.postimg.cc/QM9dMFhq/cloud.png) 50 round;
+}
+
+.whitecloudyfull { 
+width:100%;
+height:100%;
+overflow-y:auto;
+background:#fff;
+color:black;
+}</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="whitecloudybox"&gt;&lt;div class="whitecloudyfull"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+&lt;/div&gt;&lt;/div&gt;</code></pre>
+              </details>
+            </section>
+  </div>
+  <div class="col">
+    
+    <section class="snippetbox"> 
+        <div class="snippet">
+            <div class="circlehold">
+                <div class="circle"></div>
+                <div class="circletext">
+                
+                    no scroll for this one
+        
+        </div>
+        </div>
+        </div>
+          <details>
+            <summary>View Code</summary>
+            <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.circlehold {
+width:100%;
+height:155px;
+}
+
+.circletext {
+text-align:center;
+display: flex;
+justify-content: center;
+align-items: center;
+color:black;
+padding:2px;
+position:relative;
+bottom:150px;
+width:300px;
+height:140px;
+margin:0 auto;
+z-index:2;
+text-shadow: rgb(255, 255, 255) 2px 0px 0px, rgb(255, 255, 255) 1.75517px 0.958851px 0px, rgb(255, 255, 255) 1.0806px 1.68294px 0px, rgb(255, 255, 255) 0.141474px 1.99499px 0px, rgb(255, 255, 255) -0.832294px 1.81859px 0px, rgb(255, 255, 255) -1.60229px 1.19694px 0px, rgb(255, 255, 255) -1.97999px 0.28224px 0px, rgb(255, 255, 255) -1.87291px -0.701566px 0px, rgb(255, 255, 255) -1.30729px -1.51361px 0px, rgb(255, 255, 255) -0.421592px -1.95506px 0px, rgb(255, 255, 255) 0.567324px -1.91785px 0px, rgb(255, 255, 255) 1.41734px -1.41108px 0px, rgb(255, 255, 255) 1.92034px -0.558831px 0px;
+font-weight:bold;
+}
+
+.circle { 
+margin:0 auto;
+background:#FFC0CB;
+opacity:50%; /* feel free to remove this line if needed */
+position:relative;
+top:2px;
+width:300px;
+height:150px;
+transform: rotate(-10deg);
+border-radius:100%;
+}
+</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="circlehold"&gt;
+&lt;div class="circle"&gt;&lt;/div&gt;
+&lt;div class="circletext"&gt; no scroll for this one &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+          </details>
+        </section>
+
+    <section class="snippetbox"> 
+      <div class="snippet">
+        <div class="glowpad"><div class="glow">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.<br><br>
+        </div></div>
+      </div>
+        <details>
+          <summary>View Code</summary>
+          <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.glowpad { margin: 0 auto; padding:10px; width:100%; box-sizing:border-box; }
+
+.glow {
+margin: 0 auto;
+width:100%;
+height:150px;
+border:3px solid pink;
+background:pink;
+border-radius:10px;
+box-shadow: 0px 0px 10px pink, 0px 0px 10px pink, 0px 0px 10px pink, 0px 0px 10px pink, 0px 0px 14px pink;
+color:black;
+overflow-y:auto;
+}
+</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="glowpad"&gt;&lt;div class="glow"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.<br><br>
+&lt;/div&gt;&lt;/div&gt;</code></pre>
+        </details>
+      </section>
+      
+    <section class="snippetbox"> 
+      <div class="snippet">
+        <div class="brackets">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+        </div>
+      </div>
+        <details>
+          <summary>View Code</summary>
+          <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.brackets {
+border: 3px hotpink solid;
+border-width: 0 3px 0 3px;
+border-radius:10px;
+padding: 0px 4px 0px 4px;
+width:100%; /* change number if needed */
+height:100px; /* change number if needed */
+overflow-y:auto;
+}
+</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="brackets"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+&lt;/div&gt;</code></pre>
+        </details>
+      </section>
+
+      <section class="snippetbox"> 
+        <div class="snippet">
+          <div class="lacescr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+          </div>
+        </div>
+          <details>
+            <summary>View Code</summary>
+            <span class="nomartop">CSS:</span>
+<pre><code class="language-css">/* scrolling version*/
+.lacescr {
+border-width:7px;
+border-style:solid;
+border-image: url("https://i.imgur.com/NJa4bp2.png") 8 fill round;
+width:100%;
+height:100px;
+overflow-y:auto;
+} 
+</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="lacescr"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+&lt;/div&gt;</code></pre>
+          </details>
+        </section>
+
+        <section class="snippetbox"> 
+          <div class="snippet">
+            <div class="pinkcloudybox"><div class="pinkcloudyfull">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+            </div></div>
+          </div>
+            <details>
+              <summary>View Code</summary>
+              <span class="nomartop">CSS:</span>
+<pre><code class="language-css">.pinkcloudybox {
+height: 139px;
+width: 100%;
+border: 10px solid transparent;
+box-sizing: border-box;
+border-image: url(https://i.postimg.cc/GmzyDT0w/BAM.png) 50 round;
+}
+
+.pinkcloudyfull {
+width: 100%;
+height: 100%;
+overflow-y: auto;
+background: #feb6dc;
+color: black;
+}
+</code></pre>
+<span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div class="pinkcloudybox"&gt;&lt;div class="pinkcloudyfull"&gt;
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fringilla urna vitae massa egestas tincidunt. Nunc vel felis velit. Aliquam varius mauris vel elit consectetur, ut varius nisi dapibus. Etiam at nibh eu nulla fermentum tristique. Mauris ultricies nisi quis odio molestie tempor. Duis a dolor risus. Pellentesque sed quam vel dolor euismod bibendum quis sed augue. Vivamus urna tellus, iaculis a luctus a, dapibus quis nisl. In eget enim ultricies, accumsan tortor vitae, facilisis libero. Donec massa leo, porta sit amet nisl nec, semper ullamcorper elit. Aenean luctus vel purus ut scelerisque. Suspendisse commodo luctus tortor. Fusce mi mi, varius in iaculis non, eleifend et nunc. Phasellus facilisis nibh sodales felis ultrices, sit amet consequat tortor dapibus. Curabitur quis nulla sed est efficitur malesuada. Aliquam facilisis ultricies felis, fermentum consectetur leo mattis sit amet.
+&lt;/div&gt;&lt;/div&gt;</code></pre>
+            </details>
+          </section>
+  </div>
+</div>
+                </div>
+</main>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", (event) => {
+      document.querySelectorAll("pre code").forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+  </script>
+  
+  <script src="https://loveberry.nekoweb.org/assets/js/copy.js"></script>
+</body>
+</html>

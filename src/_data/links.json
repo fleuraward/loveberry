@@ -1,0 +1,778 @@
+[
+    {
+      "url": "https://www.w3schools.com/",
+      "tags": ["Basic", "Snippets", "June's Favourites"],
+      "description": "Lots of easy beginner stuff as well as some snippets to help you learn"
+    },
+    {
+      "url": "https://developer.mozilla.org/en-US/",
+      "tags": ["Basic", "June's Favourites"],
+      "description": "A good HTML/CSS/JS reference site"
+    },
+    {
+        "url": "https://stackoverflow.com/tags",
+        "tags": ["Basic", "Misc"],
+        "description": "A place where you can ask questions on how to do things, it's been around for a while so make sure to search for your query first before asking"
+    },
+    {
+        "url": "https://jsfiddle.net/",
+        "tags": ["Programs"],
+        "description": "Like Codepen (online code editor) but you don't need an account"
+    },
+    {
+        "url": "https://css-tricks.com/snippets/css/a-guide-to-flexbox/",
+        "tags": ["Basic", "Snippets", "June's Favourites"],
+        "description": "Easy and quick sheet giving a quick rundown of flexbox related things"
+    },
+    {
+        "url": "https://websitesetup.org/css3-cheat-sheet/",
+        "tags": ["Basic"],
+        "description": "A huge CSS cheat sheet"
+    },
+    {
+        "url": "https://boxshadows.xyz/",
+        "tags": ["Generator"],
+        "description": "A box shadow generator"
+    },
+    {
+        "url": "http://owumaro.github.io/text-stroke-generator/",
+        "tags": ["Generator", "June's Favourites"],
+        "description": "A text stroke generator using text shadow"
+    },
+    {
+        "url": "https://www.shecodes.io/css_generators/css-transform-generator",
+        "tags": ["Generator"],
+        "description": "A CSS transformations generator"
+    },
+    {
+        "url": "https://www.useragentman.com/matrix/",
+        "tags": ["Generator"],
+        "description": "A CSS matrix (3d) generator"
+    },
+    {
+        "url": "https://9elements.github.io/fancy-border-radius/full-control",
+        "tags": ["Generator", "June's Favourites"],
+        "description": "A border radius generator that gives you control over 8 points, makes it easier to create unique shapes"
+    },
+    {
+        "url": "https://bennettfeely.com/clippy/",
+        "tags": ["Generator"],
+        "description": "A CSS clip-path maker"
+    },
+    {
+        "url": "https://cssgradient.io/",
+        "tags": ["Generator"],
+        "description": "A CSS gradient maker"
+    },
+    {
+        "url": "https://www.lipsum.com/",
+        "tags": ["Generator"],
+        "description": "Generates a bunch of lorem ipsum text based on how many paragraphs of it you want, great for placeholder stuff"
+    },
+    {
+        "url": "https://www.stuffbydavid.com/textcolorizer",
+        "tags": ["Generator"],
+        "description": "BBCode and HTML text colouriser, creates text gradients by wrapping each letter in a &lt;span&gt; styled in the order of a gradient"
+    },
+    {
+        "url": "https://neumorphism.io/",
+        "tags": ["Generator"],
+        "description": "Allows you to create elements in a neumorphism style"
+    },
+    {
+        "url": "https://kovart.github.io/dashed-border-generator/",
+        "tags": ["Generator"],
+        "description": "Allows you to create custom dashed and dotted borders"
+    },
+    {
+        "url": "https://codepen.io/sadness97/full/XJbLxNj",
+        "tags": ["Template"],
+        "description": "Sadgrl's layout builder"
+    },
+    {
+        "url": "https://petrapixel.neocities.org/coding/layout-generator",
+        "tags": ["Template", "Generator"],
+        "description": "Petrapixel's layout generator, is more accessible than Sadgrl's and has more options"
+    },
+    {
+        "url": "https://templaterr.neocities.org/",
+        "tags": ["Template"],
+        "description": "Neocities Layouts"
+    },
+    {
+        "url": "https://eggramen.neocities.org/code/css_testpages",
+        "tags": ["Template"],
+        "description": "Eggramen's layouts"
+    },
+    {
+        "url": "https://limegreen.neocities.org/templates/wikitable/wikitable",
+        "tags": ["Template"],
+        "description": "A layout mimicing wiki sites like fandom"
+    },
+    {
+        "url": "https://websetsbylynn.neocities.org/",
+        "tags": ["Generator", "Graphics"],
+        "description": "Websets by Lynn, featuring graphics, glitter text generators and an 88 x 31 button maker"
+    },
+    {
+        "url": "https://zonelets.net/",
+        "tags": ["Template", "Snippets"],
+        "description": "Helps you set up a blog for your site, has some themes you can choose from"
+    },
+    {
+        "url": "https://rarebit.neocities.org/",
+        "tags": ["Template"],
+        "description": "Helps you set up a template for your comic"
+    },
+    {
+        "url": "https://virtualobserver.moe/ayano/comment-widget",
+        "tags": ["Snippets", "June's Favourites"],
+        "description": "Lets you add comment sections on your website"
+    },
+    {
+        "url": "https://frills.dev/blog/231023-add-moderation-to-comment-widget/",
+        "tags": ["Snippets", "June's Favourites"],
+        "description": "Frills' moderation add-on for ayano's comment widget"
+    },
+    {
+        "url": "https://loveberry.nekoweb.org/guide/admin mark/",
+        "tags": ["Snippets", "June's Favourites"],
+        "description": "My Admin Mark add-on for ayano's comment widget"
+    },
+    {
+        "url": "https://jbc.lol/tutorials/ayano-pinning/",
+        "tags": ["Snippets", "June's Favourites"],
+        "description": "Jb's comment pinning add-on for ayano's comment widget"
+    },
+    {
+        "url": "https://www.dafont.com/",
+        "tags": ["Fonts"],
+        "description": "A font collection database"
+    },
+    {
+        "url": "https://fonts.google.com/",
+        "tags": ["Fonts", "June's Favourites"],
+        "description": "Google fonts"
+    },
+    {
+        "url": "https://archive.org/download/Fontworks/",
+        "tags": ["Fonts"],
+        "description": "An archived collection of fontworks fonts"
+    },
+    {
+        "url": "https://fontcity.neocities.org/",
+        "tags": ["Fonts"],
+        "description": "Some fonts hosted on neocities"
+    },
+    {
+        "url": "https://www.tumblr.com/tamapalace/752923986362548225/the-iconic-tamagotchi-connection-font-is-now",
+        "tags": ["Fonts"],
+        "description": "The Tamagotchi Connections font"
+    },
+    {
+        "url": "https://www.tumblr.com/gayocto-rey/712271192135008256/official-splatoon-fonts-complete-with-kanji",
+        "tags": ["Fonts"],
+        "description": "Splatoon 1 and Splatoon 2 fonts"
+    },
+    {
+        "url": "https://blinkies.cafe/",
+        "tags": ["Generator", "Graphics"],
+        "description": "Generate your own blinkies"
+    },
+    {
+        "url": "https://gifcities.org/",
+        "tags": ["Graphics"],
+        "description": "Animated gifs from geocities"
+    },
+    {
+        "url": "https://99gifshop.neocities.org/",
+        "tags": ["Graphics"],
+        "description": "A gif collection"
+    },
+    {
+        "url": "https://www.deadlinkchecker.com/website-dead-link-checker.asp",
+        "tags": ["Accessibility", "Misc"],
+        "description": "Checks your site for dead links"
+    },
+    {
+        "url": "https://www.browserling.com/tools/text-replace",
+        "tags": ["Misc"],
+        "description": "A text replacer"
+    },
+    {
+        "url": "https://meyerweb.com/eric/tools/color-blend/#:::hex",
+        "tags": ["Misc"],
+        "description": "Blend two colours together"
+    },
+    {
+        "url": "https://www.spriters-resource.com/",
+        "tags": ["Graphics", "June's Favourites"],
+        "description": "Sprite rips from a wide variety of games"
+    },
+    {
+        "url": "http://embedresponsively.com/",
+        "tags": ["Accessibility", "Misc"],
+        "description": "Embeds iframes in a responsive manner"
+    },
+    {
+        "url": "https://www.webdesignmuseum.org/",
+        "tags": ["Misc", "June's Favourites"],
+        "description": "A museum of web design, great for inspiration"
+    },
+    {
+        "url": "https://layouts.spacehey.com/layout?id=85996#/",
+        "tags": ["Snippets"],
+        "description": "A working coded Nintendo DS"
+    },
+    {
+        "url": "https://gifypet.neocities.org/",
+        "tags": ["Snippets"],
+        "description": "A pet for your website"
+    },
+    {
+        "url": "https://tamanotchi.world/",
+        "tags": ["Snippets"],
+        "description": "Like a tamagotchi but NOT! can have them chill on your site"
+    },
+    {
+        "url": "https://webneko.net/",
+        "tags": ["Snippets"],
+        "description": "Code for a cat that can follow your cursor"
+    },
+    {
+        "url": "https://www.imood.com/",
+        "tags": ["Snippets"],
+        "description": "Share your mood with the world"
+    },
+    {
+        "url": "https://status.cafe/",
+        "tags": ["Snippets", "June's Favourites"],
+        "description": "Share a status with the world. Wait time to be accepted for an account can sometimes be long."
+    },
+    {
+        "url": "https://social.nekoweb.org/",
+        "tags": ["Snippets", "June's Favourites"],
+        "description": "A nekoweb social page, similar in manner to status.cafe"
+    },
+    {
+        "url": "https://pollcode.com/",
+        "tags": ["Snippets"],
+        "description": "Allows you to add a poll to your website"
+    },
+    {
+        "url": "https://khang-nd.github.io/7.css/",
+        "tags": ["Libraries"],
+        "description": "CSS framework recreating Windows 7"
+    },
+    {
+        "url": "https://botoxparty.github.io/XP.css/",
+        "tags": ["Libraries"],
+        "description": "CSS Framework recreating Windows XP"
+    },
+    {
+        "url": "https://jdan.github.io/98.css/",
+        "tags": ["Libraries"],
+        "description": "CSS Framework recreating Windows 98"
+    },
+    {
+        "url": "https://sakofchit.github.io/system.css/",
+        "tags": ["Libraries"],
+        "description": "CSS Framework based on System 6 of Apples OS system"
+    },
+    {
+        "url": "https://thesimscss.inbn.dev/",
+        "tags": ["Libraries"],
+        "description": "CSS Framework based on Sims 1"
+    },
+    {
+        "url": "https://nielssp.github.io/classic-stylesheets/",
+        "tags": ["Libraries"],
+        "description": "CSS Frameworks based on different operating systems"
+    },
+    {
+        "url": "https://michalsnik.github.io/aos/",
+        "tags": ["Libraries"],
+        "description": "Allows things to be animated as you scroll down"
+    },
+    {
+        "url": "https://code.visualstudio.com/",
+        "tags": ["Programs"],
+        "description": "A code editor"
+    },
+    {
+        "url": "https://vscodium.com/",
+        "tags": ["Programs", "June's Favourites"],
+        "description": "A code editor"
+    },
+    {
+        "url": "https://brackets.io/",
+        "tags": ["Programs", "June's Favourites"],
+        "description": "A code editor"
+    },
+    {
+        "url": "https://www.gameuidatabase.com/",
+        "tags": ["Misc"],
+        "description": "A database of game UI's, good for inspiration"
+    },
+    {
+        "url": "https://piclog.blue/",
+        "tags": ["Misc", "Snippets"],
+        "description": "Share (heavily compressed) pictures with your friends"
+    },
+    {
+        "url": "https://validator.w3.org/",
+        "tags": ["Basic", "Accessibility"],
+        "description": "A HTML validator"
+    },
+    {
+        "url": "https://www.dragonflycave.com/free-quiz-scripts",
+        "tags": ["Snippets"],
+        "description": "Scripts to make a quiz on your website"
+    },
+    {
+        "url": "https://fonts.google.com/icons",
+        "tags": ["Libraries"],
+        "description": "Googles material icons"
+    },
+    {
+        "url": "https://lucide.dev/",
+        "tags": ["Libraries", "June's Favourites"],
+        "description": "Lucide icons"
+    },
+    {
+        "url": "https://contrast-triangle.com/",
+        "tags": ["Basic", "Accessibility", "Misc", "June's Favourites"],
+        "description": "An accessibility resource that makes sure you have enough contrast between the background, link text and normal text if you're removing the underline from the link"
+    },
+    {
+        "url": "https://www.w3schools.com/css/css_templates.asp",
+        "tags": ["Template"],
+        "description": "W3Schools responsive templates"
+    },
+    {
+        "url": "https://www.beepbird.net/freebies/site-templates/website-templates.html",
+        "tags": ["Template"],
+        "description": "Beepbird's responsive templates"
+    },
+    {
+        "url": "https://kalechips.net/projects/snippets",
+        "tags": ["Snippets"],
+        "description": "Kalechips code snippets"
+    },
+    {
+        "url": "https://kalechips.net/projects/layouts/",
+        "tags": ["Template"],
+        "description": "Kalechips responsive layouts"
+    },
+    {
+        "url": "https://kalechips.net/projects/code/",
+        "tags": ["Snippets", "Misc"],
+        "description": "Kalechips coding projects, including: a fake but accessible listography clone (with added features), a gallery genertator as well as some PHP snippets"
+    },
+    {
+        "url": "https://punkwasp.neocities.org/creations/templates/",
+        "tags": ["Template"],
+        "description": "Punkwasp's templates"
+    },
+    {
+        "url": "https://animate.style/",
+        "tags": ["Libraries"],
+        "description": "A library of css animations"
+    },
+    {
+        "url": "https://cupcakeipsum.com/",
+        "tags": ["Generator", "Misc"],
+        "description": "A lorem ipsum generator but focused around cake"
+    },
+    {
+        "url": "https://highlightjs.org/",
+        "tags": ["Libraries", "June's Favourites"],
+        "description": "A library which styles syntax within code blocks to be highlighted, used on the code blocks in the resources page of this website"
+    },
+    {
+        "url": "https://wave.webaim.org/",
+        "tags": ["Basic", "Accessibility"],
+        "description": "A website which evaluates your code for accessibility errors"
+    },
+    {
+        "url": "https://nownownow.com/about",
+        "tags": ["Misc"],
+        "description": "A website which lists everyone with a 'now' page, a concept which says what a person is focused on at that part of their life."
+    },
+    {
+        "url": "https://fontstruct.com/fontstructions/show/2611132/fields-of-mistria",
+        "tags": ["Fonts"],
+        "description": "Fields of Mistria font."
+    },
+    {
+        "url": "https://drawbox.nekoweb.org/",
+        "tags": ["Snippets", "June's Favourites"],
+        "description": "Allows you to add a canvas drawing area, where people can draw images and submit them to you"
+    },
+    {
+        "url": "https://bohemiansultriness.nekoweb.org/goodies/keepittidy.txt",
+        "tags": ["Snippets"],
+        "description": "An add-on to drawbox that adds moderation"
+    },
+    {
+        "url": "https://devdocs.io/",
+        "tags": ["Basic"],
+        "description": "API documentaton for any language / framework. You can use the search section for what you're looking for, and download it offline."
+    },
+    {
+        "url": "https://fontjoy.com/",
+        "tags": ["Fonts"],
+        "description": "A website that helps you with pairing fonts"
+    },
+    {
+        "url": "https://www.freefaces.gallery/",
+        "tags": ["Fonts"],
+        "description": "A gallery that curates fonts that are under some kind of free license"
+    },
+    {
+        "url": "https://palitra.app",
+        "tags": ["Misc"],
+        "description": "Search a brand, and it will give you colour palettes based on that search term"
+    },
+    {
+        "url": "https://randoma11y.com/",
+        "tags": ["Accessibility", "Generator", "Misc"],
+        "description": "A website that generates random accessible colour combinations that meet contrast guidelines"
+    },
+    {
+        "url": "https://fontshare.com/",
+        "tags": ["Fonts"],
+        "description": "A font website where all fonts are free for commercial and personal use"
+    },
+    {
+        "url": "https://dirtylinestudio.com/freebies/",
+        "tags": ["Fonts"],
+        "description": "Free fonts from dirtylinestudio"
+    },
+    {
+        "url": "https://uncut.wtf/",
+        "tags": ["Fonts"],
+        "description": "Another font related website"
+    },
+    {
+        "url": "https://home.streamlinehq.com/",
+        "tags": ["Libraries"],
+        "description": "The 'ultimate icon library', having lists of many other icon libraries within the website"
+    },
+    {
+        "url": "https://coolshap.es/",
+        "tags": ["Misc"],
+        "description": "A website with cool abstract shapes you can download and use"
+    },
+    {
+        "url": "https://land-book.com/",
+        "tags": ["Misc"],
+        "description": "A web design inspiration website"
+    },
+    {
+        "url": "https://www.awwwards.com",
+        "tags": ["Misc"],
+        "description": "A web design inspiration website"
+    },
+    {
+        "url": "https://notepad-plus-plus.org/",
+        "tags": ["Programs"],
+        "description": "A code editor"
+    },
+    {
+        "url": "https://pixeliana.neocities.org/statuscafe",
+        "tags": ["Snippets", "Misc"],
+        "description": "A quick guide to styling your status cafe page"
+    },
+    {
+        "url": "",
+        "tags": ["Basic", "Misc"],
+        "description": ""
+    },
+    {
+        "url": "https://www.write-on.org/html/builder.html",
+        "tags": ["Template"],
+        "description": "A layout builder"
+    },
+    {
+        "url": "https://toggles.dev/",
+        "tags": ["Snippets"],
+        "description": "A collection of css toggles, to switch between light and dark mode"
+    },
+    {
+        "url": "https://kushagra.dev/lab/hint/",
+        "tags": ["Libraries"],
+        "description": "A css tooltp library"
+    },
+    {
+        "url": "https://cssanimation.io/",
+        "tags": ["Libraries"],
+        "description": "A css animation library"
+    },
+    {
+        "url": "https://www.lightgalleryjs.com/",
+        "tags": ["Libraries"],
+        "description": "A javascript lightbox image and video library"
+    },
+    {
+        "url": "https://11ty.rocks/posts/create-your-first-basic-11ty-website/",
+        "tags": ["Misc", "June's Favourites"],
+        "description": "A guide to set up your first basic 11ty website, I personally used this to get started and it helped me a lot"
+    },
+    {
+        "url": "https://webcode.tools/",
+        "tags": ["Generator"],
+        "description": "Has a bunch of different generators, from stuff like meta tags too helping with border stuff"
+    },
+    {
+        "url": "https://slashpages.net/",
+        "tags": ["Misc"],
+        "description": "A list of 'slash pages' that you can add to your website, such as /now and /chipotle"
+    },
+    {
+        "url": "https://solaria.neocities.org/accessibility",
+        "tags": ["Accessibility"],
+        "description": "Solaria's guide to web accessibility"
+    },
+    {
+        "url": "https://www.w3.org/TR/WCAG22/",
+        "tags": ["Accessibility"],
+        "description": "WCAG 2.2 web accessibility standards"
+    },
+    {
+        "url": "https://www.w3.org/WAI/WCAG22/quickref/",
+        "tags": ["Accessibility"],
+        "description": "WCAG 2.2 web accessibility quick reference"
+    },
+    {
+        "url": "https://www.w3.org/WAI/WCAG22/Understanding/",
+        "tags": ["Accessibility"],
+        "description": "WCAG 2.2 web accessibility understanding the documentaton with explanations of the WCAG guidelines and success criteria"
+    },
+    {
+        "url": "https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/",
+        "tags": ["Accessibility"],
+        "description": "Outlines the difference between WCAG A, AA and AAA accessibility criteria iin a simple to understand way"
+    },
+    {
+        "url": "https://support.freedomscientific.com/Downloads/JAWS",
+        "tags": ["Accessibility"],
+        "description": "One of the most popular screenreader softwares"
+    },
+    {
+        "url": "https://www.nvaccess.org/download/",
+        "tags": ["Accessibility"],
+        "description": "The other one of the most popular screenreader softwares"
+    },
+    {
+        "url": "https://trace.umd.edu/peat/",
+        "tags": ["Accessibility"],
+        "description": "Photosensitivity analysis tool."
+    },
+    {
+        "url": "https://poet.diagramcenter.org/how.html",
+        "tags": ["Accessibility"],
+        "description": "Training for how too write good alt text"
+    },
+    {
+        "url": "https://sleepydev.neocities.org/posts/5%20Ways%20to%20make%20your%20Neocities%20site%20more%20accessible",
+        "title": "https://sleepydev.neocities.org/posts/5 Ways to make your Neocities site more accessible",
+        "tags": ["Accessibility"],
+        "description": "Different ways you can make your site accessible, mainly focuses on more simple beginner level stuff."
+    },
+    {
+        "url": "https://content-security-policy.neocities.org/",
+        "tags": ["Basic"],
+        "description": "A page which outlines how the content security policy works on neocities for free accounts"
+    },
+    {
+        "url": "https://www.npmjs.com/package/freezeframe",
+        "tags": ["Accessibility", "June's Favourites"],
+        "description": "NPM's page on freezeframe.js, I find it easier to navigate the documentation on this page rather than the github repo"
+    },
+    {
+        "url": "https://candy.wavebeem.com/",
+        "tags": ["Libraries"],
+        "description": "A cute looking CSS framework"
+    },
+    {
+        "url": "https://codeadrian.github.io/clay.css/",
+        "tags": ["Libraries"],
+        "description": "A clay style CSS framework"
+    },
+    {
+        "url": "https://nostalgic-css.github.io/NES.css/",
+        "tags": ["Libraries"],
+        "description": "A NES styled CSS framework"
+    },
+    {
+        "url": "https://sakofchit.github.io/system.css/",
+        "tags": ["Libraries"],
+        "description": "A retro apple styled CSS framework"
+    },
+    {
+        "url": "https://www.getpapercss.com/",
+        "tags": ["Libraries"],
+        "description": "A paper styled CSS framework"
+    },
+    {
+        "url": "https://concrete.style/",
+        "tags": ["Libraries"],
+        "description": "A simple CSS framework"
+    },
+    {
+        "url": "https://brisray.com/web/webring-list.htm",
+        "tags": ["Misc", "June's Favourites"],
+        "description": "A listing of webrings for you to join"
+    },
+    {
+        "url": "https://motherfuckingwebsite.com/",
+        "tags": ["Misc"],
+        "description": "The 'motherfucking website' that's satire and often used to highlight issues with overdesigning, slow and unresponsive sites"
+    },
+    {
+        "url": "http://bettermotherfuckingwebsite.com/",
+        "tags": ["Misc"],
+        "description": "The 'better motherfucking website' that builds on the first one, showing how minimal css can improve a website"
+    },
+    {
+        "url": "https://perfectmotherfuckingwebsite.com",
+        "tags": ["Misc"],
+        "description": "The final site of the 'motherfucking website' saga. This one outlines adding a language tag and a dark mode media query"
+    },
+    {
+        "url": "https://www.whocanuse.com/",
+        "tags": ["Accessibility", "June's Favourites"],
+        "description": "A color contrast tool that gives your combination a grade based on WCAG AA and AAA criteria, also has sections to see what the colour combination is like for those with different vision related issues"
+    },
+    {
+        "url": "https://hekate2.github.io/website-tools/archive/backgrounds.html",
+        "tags": ["Graphics"],
+        "description": "A collection of different backgrounds"
+    },
+    {
+        "url": "https://www.glitter-graphics.com/",
+        "tags": ["Graphics"],
+        "description": "A collection of different graphics"
+    },
+    {
+        "url": "https://gothiclolita.neocities.org/materials",
+        "tags": ["Graphics"],
+        "description": "A collection of different graphics"
+    },
+    {
+        "url": "https://internetbumperstickers.com/frontbumper/",
+        "tags": ["Graphics"],
+        "description": "A collection of internet bumper stickers"
+    },
+    {
+        "url": "http://da-lace.com/",
+        "tags": ["Graphics"],
+        "description": "A Japanese site with a bunch of lace images"
+    },
+    {
+        "url": "https://mouseling.net/sozai/",
+        "tags": ["Graphics"],
+        "description": "mouseling.net's sozai directory"
+    },
+    {
+        "url": "https://caniuse.com/",
+        "tags": ["Accessibility", "Misc"],
+        "description": "A website that shows which browser can use which (css) properties, great for checking cross-browser support"
+    },
+    {
+        "url": "https://nenrikido.neocities.org/blog/post/making-a-preloader/",
+        "tags": ["Basic", "Misc"],
+        "description": "nenrikido's guide to making a preloader for your website"
+    },
+    {
+        "url": "https://jbcarreon123.nekoweb.org/utils/split-it/",
+        "tags": ["Generator", "June's Favourites"],
+        "description": "A generator that puts <span> tags around each letter of a word you've put in but can be customised to other options, super helpful for stuff like tumblr wobble and princess text"
+    },
+    {
+        "url": "https://cssgridgarden.com/",
+        "tags": ["Basic"],
+        "description": "A game to help you learn CSS grid"
+    },
+    {
+        "url": "https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/",
+        "tags": ["Basic"],
+        "description": "An interactive guide to help you learn flexbox"
+    },
+    {
+        "url": "https://xobyte.org/ThemeWizard/",
+        "tags": ["Misc"],
+        "description": "Xobyte's theme wizard, allows you to switch between different CSS stylesheets depending on the theme picked"
+    },
+    {
+        "url": "https://www.joshwcomeau.com/css/custom-css-reset/",
+        "tags": ["Basic", "Misc"],
+        "description": "Josh's version of a modern CSS reset"
+    },
+    {
+        "url": "https://shantellsans.com/",
+        "tags": ["Fonts"],
+        "description": "A free marker-style font"
+    },
+    {
+        "url": "https://www.javascriptfreecode.com/36.htm",
+        "tags": ["Snippets"],
+        "description": "A javascript calendar"
+    },
+    {
+        "url": "https://uigradients.com/",
+        "tags": ["Generator"],
+        "description": "A site which has a list of different gradients and hex codes for you to use"
+    },
+    {
+        "url": "https://tablericons.com/",
+        "tags": ["Libraries"],
+        "description": "Tabler icons"
+    },
+    {
+        "url": "https://pagespeed.web.dev/",
+        "tags": ["Accessibility", "June's Favourites"],
+        "description": "A page which measures your sites' performance, accessibility, best practices and SEO for both mobile and desktop, as well as tells you how to improve your score"
+    },
+    {
+        "url": "https://component.gallery/",
+        "tags": ["Snippets"],
+        "description": "A gallery of components you can add to your site, be mindful of the 'tech' tag for what it's coded in"
+    },
+    {
+        "url": "https://tinytools.directory/",
+        "tags": ["Misc"],
+        "description": "A directory of different tools for different things"
+    },
+    {
+        "url": "https://dimden.dev/moonwidget/",
+        "tags": ["Snippets"],
+        "description": "A moon widget you can embed onto your site"
+    },
+    {
+        "url": "https://www.w3schools.com/cssref/css_default_values.php",
+        "tags": ["Basic", "June's Favourites"],
+        "description": "A list of the basic semantic components and their default css styling"
+    },
+    {
+        "url": "https://una.im/color-mix-opacity/",
+        "tags": ["Misc"],
+        "description": "Covering the color mix component"
+    },
+    {
+        "url": "https://www.w3schools.com/jsref/default.asp",
+        "tags": ["Basic", "June's Favourites"],
+        "description": "Js reference by category"
+    },
+    {
+        "url": "https://github.com/goabstract/Awesome-Design-Tools",
+        "tags": ["Misc"],
+        "description": "A masterlist of different tools you can use"
+    },
+    {
+        "url": "https://melankorin.net/links/library/",
+        "tags": ["Misc"],
+        "description": "Melankorin's list of links"
+    }
+  ]

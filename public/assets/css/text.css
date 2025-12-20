@@ -1,0 +1,362 @@
+/* tumblr wobble */
+.tumblrwob {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    white-space:pre;
+    font-size: 2rem;
+    font-family: Arial;
+    color:var(--foreground);
+  }
+  
+  .wobble:nth-child(4n+1) {
+    -webkit-animation:tumblrwobble 4s ease-in-out -.5s infinite;
+    animation:tumblrwobble 4s ease-in-out -.5s infinite
+  }
+  
+  @keyframes tumblrwobble{
+    0%  { transform:translateY(5%) skew(3deg) }
+    25% { transform:translateY(-5%) }
+    50% { transform:translateY(5%) skew(-3deg) }
+    75% { transform:translateY(-5%) }
+    to { transform:translateY(5%) skew(3deg) }
+  }
+  
+  @-webkit-keyframes tumblrwobble{
+    0%  { transform:translateY(5%) skew(3deg) }
+    25% { transform:translateY(-5%) }
+    50% { transform:translateY(5%) skew(-3deg) }
+    75% { transform:translateY(-5%) }
+    to { transform:translateY(5%) skew(3deg) }
+  }
+  
+  .wobble:nth-child(4n+2){
+    -webkit-animation:tumblrwobble 4s ease-in-out -1s infinite;
+    animation:tumblrwobble 4s ease-in-out -1s infinite;
+  }
+  
+  .wobble:nth-child(4n+3){
+    -webkit-animation:tumblrwobble 4s ease-in-out -1.5s infinite;
+    animation:tumblrwobble 4s ease-in-out -1.5s infinite;
+  }
+  
+  .wobble:nth-child(4n){
+    -webkit-animation:tumblrwobble 4s ease-in-out 0s infinite;
+    animation:tumblrwobble 4s ease-in-out 0s infinite;
+  }
+  
+  /* text stroke */
+  .tsb {
+      text-align: center;
+    font-family:arial;
+    font-size:2rem;
+    color:var(--foreground);
+    filter: drop-shadow(0px 1px var(--background)) drop-shadow(0 -1px var(--background)) drop-shadow(1px 0 var(--background)) drop-shadow(-1px 0 var(--background));
+  }
+  
+  /* princess */
+  .prinzessin { margin:0 auto; text-align:center}
+  .prinzessin mark { 
+  font-family: arial;
+  font-size:2rem;
+  font-weight:bold;
+  background: none;
+  color:var(--foreground);
+  animation: princess 2s infinite;
+  animation-timing-function: cubic-bezier(0.25, 0.85, 0.4, 1);
+  }
+   
+  .prinzessin mark:nth-child(1) { animation-delay:0s; display:inline-block;}
+  .prinzessin mark:nth-child(2) { animation-delay:0.2s; display:inline-block;}
+  .prinzessin mark:nth-child(3) { animation-delay:0.4s; display:inline-block; }
+  .prinzessin mark:nth-child(4) { animation-delay:0.6s; display:inline-block;}
+  .prinzessin mark:nth-child(5) { animation-delay:0.8s; display:inline-block;}
+  .prinzessin mark:nth-child(6) { animation-delay:1s; display:inline-block;}
+  .prinzessin mark:nth-child(7) { animation-delay:1.2s; display:inline-block;}
+  .prinzessin mark:nth-child(8) { animation-delay:1.4s; display:inline-block;}
+  .prinzessin mark:nth-child(9) { animation-delay:1.6s; display:inline-block;}
+  .prinzessin mark:nth-child(10) { animation-delay:1.8s; display:inline-block;}
+   
+  @-webkit-keyframes princess {
+      from { transform:scale(0.90); color:var(--foreground); }
+      50% { transform:scale(1); color:hotpink; }
+      to { transform:scale(0.90); color:var(--foreground); }
+  }
+  
+  @keyframes princess {
+      from { transform:scale(0.90); color:var(--foreground); }
+      50% { transform:scale(1); color:hotpink; }
+      to { transform:scale(0.90); color:var(--foreground); }
+  }
+  
+  /* 2 outline */
+  .twooutline {
+  color: white;
+  font-size: 2rem;
+  font-family:arial;
+  font-weight:bold;
+  margin:0 auto;
+  text-align: center;
+  filter: drop-shadow(0px 1px black) drop-shadow(0 -1px black) drop-shadow(1px 0 black) drop-shadow(-1px 0 black) drop-shadow(0px 1px hotpink) drop-shadow(0 -1px hotpink) drop-shadow(1px 0 hotpink) drop-shadow(-1px 0 hotpink);
+  }
+  
+  .gradmask {
+  background: linear-gradient(pink 50%, hotpink);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size:2rem;
+  filter: drop-shadow(0px 1px black) drop-shadow(0 -1px black) drop-shadow(1px 0 black) drop-shadow(-1px 0 black);
+  font-weight:bold;
+  margin:0 auto;
+  text-align: center;
+  }
+  
+  /* glowing */
+  .glowtext {
+      margin:0 auto;
+  text-align: center;
+  background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--foreground);
+      font-size:2rem;
+      font-weight:bold;
+      -webkit-animation: glow 2.0s linear infinite;
+      animation: glow 2.0s linear infinite;
+      color:var(--foreground);
+  }
+   
+  @keyframes glow {
+  0% { text-shadow: 0 0 15px pink; }
+  50% { text-shadow: none; }
+  100% { text-shadow: 0 0 15px pink; }
+  }
+  @-webkit-keyframes glow {
+  0% { text-shadow: 0 0 15px pink; }
+  50% { text-shadow: 0 0 0; }
+  100% { text-shadow: 0 0 15px pink; }
+  }
+  
+  /* tilt */
+  
+  .tilty {
+    text-align: center;
+    font-size:2rem;
+    animation: tilt 1s infinite alternate;
+  }
+  
+  @keyframes tilt { 
+    from { transform: rotate(5deg); }
+    to { transform: rotate(-5deg); }
+  }
+  
+  /* rise */
+    .rise { 
+   width:fit-content;
+  transition: .2s ease; 
+  font-size:2rem;
+    text-align: center;
+    margin:0 auto;
+  } 
+  
+  .rise:hover { 
+  transform: translateY(-20%); 
+  }
+  
+  /* color change */
+  .colchange {
+    width:fit-content;
+    transition: .2s ease; 
+    color:var(--foreground);
+    font-size:2rem;
+    text-align: center;
+    margin:0 auto;
+  }
+  
+  .colchange:hover {
+    color:hotpink;
+  }
+  
+  /* bubble */
+  .bubbler {
+  font-size:2rem;
+  font-family:arial;
+  text-align: center;
+  }
+  
+  .bubbler mark { 
+  animation: bubble 2s infinite;
+  animation-timing-function: ease-in-out;
+  background: none;
+  color:var(--foreground);
+  }
+   
+  .bubbler mark:nth-child(1) { animation-delay:0s; display:inline-block;}
+  .bubbler mark:nth-child(2) { animation-delay:0.8s; display:inline-block;}
+  .bubbler mark:nth-child(3) { animation-delay:1.6s; display:inline-block; }
+  .bubbler mark:nth-child(4) { animation-delay:2.4s; display:inline-block;}
+  .bubbler mark:nth-child(5) { animation-delay:3.2s; display:inline-block;}
+  .bubbler mark:nth-child(6) { animation-delay:4s; display:inline-block;}
+  .bubbler mark:nth-child(7) { animation-delay:4.8s; display:inline-block;}
+  .bubbler mark:nth-child(8) { animation-delay:5.6s; display:inline-block;}
+  .bubbler mark:nth-child(9) { animation-delay:6.4s; display:inline-block;}
+  .bubbler mark:nth-child(10) { animation-delay:7.2s; display:inline-block;}
+  .bubbler mark:nth-child(11) { animation-delay:8s; display:inline-block;}
+  .bubbler mark:nth-child(12) { animation-delay:8.8s; display:inline-block;}
+  .bubbler mark:nth-child(13) { animation-delay:9.6s; display:inline-block;}
+  .bubbler mark:nth-child(14) { animation-delay:10.4s; display:inline-block;}
+  .bubbler mark:nth-child(15) { animation-delay:11.2s; display:inline-block;}
+  .bubbler mark:nth-child(16) { animation-delay:12s; display:inline-block;}
+  /* if you need more characters than 16 do this:
+      - copy the line above
+      - change the nth-child 16 to 17
+      - add 0.8 to the animation delay number */
+   
+  @keyframes bubble {
+  from { color:var(--foreground); }
+  50% { color:hotpink; }
+  to { color:var(--foreground); }
+  }
+   
+  @-webkit-keyframes bubble {
+  from { color:var(--foreground); }
+  50% { color:hotpink; }
+  to { color:var(--foreground); }
+  }
+  
+  /* pink wave */
+  .pinkwave {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: arial;
+    text-align: center;
+    
+    color: transparent;
+    background: url("https://loveberry.nekoweb.org/assets/images/pinkwave.png") repeat-x #fff;
+    background-clip: border-box;
+    background-size: 200% 100%;
+    
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition: background-position-y 0.6s ease;
+    -webkit-transition: background-position-y 0.6s ease;
+    animation: waveAnimation 4s infinite linear;
+    -webkit-animation: waveAnimation 4s infinite linear;
+    
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    
+    /* below just adds the outlines */
+    filter: drop-shadow(1px 1px white) drop-shadow(-1px 1px white) drop-shadow(1px -1px white) drop-shadow(-1px -1px white)
+    drop-shadow(1px 1px black) drop-shadow(-1px 1px black) drop-shadow(1px -1px black) drop-shadow(-1px -1px black);
+  }
+  
+  @-webkit-keyframes waveAnimation{
+    from { background-position-x: 0%; }
+    to { background-position-x: 200%; }
+  }
+  
+  @keyframes waveAnimation{
+    from { background-position-x: 0%; }
+    to { background-position-x: 200%; }
+  }
+  
+  .tutcen { text-align: center; margin:0 auto; display:block; width:100%;}
+  
+  /* gradient outine */
+    .gradoutline {
+  background: -webkit-linear-gradient(pink, hotpink);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-stroke: 4px transparent;
+  color: var(--foreground);
+  font-size: 2rem;
+  font-family:arial;
+  text-align: center;
+  }
+  
+  /* image mask */
+  .imagemask {
+  margin:0 auto;
+      width:fit-content;
+  background-image: url("https://loveberry.nekoweb.org/assets/images/pink.gif");
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2rem;
+  font-weight:bold;
+  /* add below if you want an outline, if not remove */
+  filter: drop-shadow(0px 1px var(--foreground)) drop-shadow(0 -1px var(--foreground)) drop-shadow(1px 0 var(--foreground)) drop-shadow(-1px 0 var(--foreground));
+  }
+  
+  /* float */
+    .float {
+  font-size:2rem;
+  text-align: center;
+  color: var(--foreground);
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  }
+  @keyframes floating {
+  0% { transform: translate(0, 0px); }
+  50% { transform: translate(0, 10px); }
+  100% { transform: translate(0, -0px); }
+  }
+  
+  /* pop */
+    .pop {
+   font-size:2rem;
+   color: var(--foreground);
+   text-align:center; /* looks weird often if not aligned in center */
+   -webkit-animation: pop 1s ease-in-out infinite alternate;
+   -moz-animation: pop 1s ease-in-out infinite alternate;
+   animation: pop 1s ease-in-out infinite alternate;
+  }
+   
+  @keyframes pop {
+  from { transform:scale(0.95) }
+  50% { transform:scale(1) }
+  to { transform:scale(0.95) }
+  }
+   
+  @-webkit-keyframes pop {
+  from { -webkit-transform:scale(0.95) }
+  50% { -webkit-transform:scale(1) }
+  to { -webkit-transform:scale(0.95) }
+  }
+  
+  /* rotating grad */
+  .rotategrad {
+  background-size: 100vw 100vw;
+  margin: 0;
+  position: relative;
+  text-align: -webkit-center;
+  font-size: 2rem;
+  background: repeating-linear-gradient(-45deg, var(--accent) 0%, var(--foreground) 25%, var(--accent) 50%);
+  animation: 'slide' 30s infinite linear forwards;
+  -webkit-animation: 'slide' 30s infinite linear forwards;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  }
+   
+  @keyframes slide {
+  0% { background-position-x: 0%; }
+  100% { background-position-x: 200vw; }
+  }
+  
+  /* bold ital hover */
+  .boldtal { 
+  transition: .2s ease; 
+  font-size:2rem;
+  text-align: center;
+  } 
+  
+  .boldtal:hover { 
+  font-weight:bold;
+  font-style:italic;
+  }

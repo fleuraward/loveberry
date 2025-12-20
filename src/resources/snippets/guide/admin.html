@@ -1,0 +1,32 @@
+---
+title: guide ♡ comment admin mark
+layout: guide.njk
+backlink: /resources/snippets/
+---
+<h2 class="grad italics">How to add an [admin] mark to ayano's comment widget</h2>
+<p>This silly little thing is inspired by <a class="outbound" href="https://frills.dev/blog/231023-add-moderation-to-comment-widget/">Frills' moderation add-on to Virtual Observer's comment widget</a>, yet this allows you
+    to add a pixel or some other image or text related identifier after your name in your own comments. This is so you can identify your own posts within your comment widget, as well as reduce the risk of impersonation.
+    This also follows similar additions to the code that Frills' does in her own moderation add-on, and similarly would need you to verify your own identity for each comment in the google sheet.</p>
+
+    <ol>
+        <li>Go to the google form that you set up for your comment widget and add a new short-answer text question at the bottom.</li>
+        <li>Name this question 'Admin'. Make sure the first letter has a capital letter, as the code is case sensitive.</li>
+        <li>From your Google form, press the three dots in the top left corner and then 'Get pre-filled link'. This will open a
+          new tab with your form, as if you were answering it. Fill in every field with the same name as its respective title and then press 'Get link'.</li>
+        <li>Paste the link into a text editor and collect the number after the final 'admin' entry. which should have the value that you filled in: 'Admin'. It will look something like this: 
+          <mark>&amp;entry.1234567890=Admin</mark></li>
+          <li>In the Javascript file for the comment widget, you want to find your <mark>const s_textId = '1234567890'</mark> and below (or below the moderated widget if
+            you also have that added) you add the code below, but with the number you got from step 4 <div class="fakearea" contenteditable="true">const s_adminId = '1234567890'</div></li>
+            <li>Next, we need to make the 'admin' variable automatically false within your google sheet; to do this find the line <mark>id="entry.${s_textId}"</mark> and below this line, add:
+              <div class="fakearea" contenteditable="true">
+            &lt;input name="entry.${s_adminId}" id="entry.${s_adminId}" type="hidden" readonly value="false"&gt;</div></li>
+            <li>After this, find <mark>name.className = 'c-name';</mark> and add:
+              <div class="fakearea" contenteditable="true">
+              if(data.Admin == true) { <br>
+                name.insertAdjacentHTML('beforeend', " &lt;img src='IMAGE URL' style='width:15px; height:15px' title='admin' alt='admin'&gt; "); <br>
+              }
+          </div>
+            Make sure to change "IMAGE URL" to your own pixel, as well as alter the width and height if needed! If you would rather have text instead of an image, you can change the <mark>&lt;img src='IMAGE URL' style='width:15px; height:15px' title='admin' alt='admin'&gt;</mark> to <mark>&lt;span class='adminmark'&gt;[Admin]&lt;/span&gt;</mark>, adding a class will allow you to style it within the CSS file.
+          </li>
+          <li>You've got it all set up, but your last instruction for security reasons is to remove the "admin" question on your google form! This is so no one can try to bypass and fill this section in through the hidden iframe!</li>
+      </ol>

@@ -1,0 +1,35 @@
+---
+title: guide ♡ comment admin mark
+layout: guide.njk
+backlink: /resources/snippets/
+---
+<h2 class="grad italics">Quick how-to's for your status cafe widget</h2>
+<p>This covers different ways to style your status cafe widget, <b>please note that for any of these to work you need to follow the initial set up section</b>. All of these assume you already have a status cafe account, of course! <b>Make sure to replace USERNAME with your own status cafe username.</b></p>
+
+<h2 class="grad italics">Initial set up</h2>
+<ol>
+    <li>From the status cafe website, go to the <a href="https://status.cafe/current-status" class="outbound">status widget</a> page</li>
+    <li>From this page, look within the "html file" section, withinn this code, you should see a section tht says <mark>&lt;script src="https://status.cafe/current-status.js?name=USERNAME" defer&gt;&lt;/script&gt;</mark>, yet with the USERNAME section having your status cafe username. Copy the url from it and open it in a new tab.</li>
+    <li>In the new tab with the JS code, you want to copy all of this and add it to a new status cafe JS file. This self hosted version will be the base of any changes below.</li>
+    <li>Once you have uploaded this to your site, wherever your status cafe widget is, replace the <mark>https://status.cafe/current-status.js?name=USERNAME</mark> link with <b>the location of your site-uploaded script</b></li>
+</ol>
+
+
+<h2 class="grad italics">Change or remove the username</h2>
+<ol>
+    <li>In your site-hosted status cafe js file, go to the section containing <mark>'&lt;a href="https://status.cafe/users/USERNAME" target="_blank"&gt;' + r.author + '&lt;/a&gt;</mark></li>
+    <li><b>To change the username:</b> change this section to be all within <mark>'</mark>. Below is an example line of code:
+    <div class="fakearea" contenteditable="true"> document.getElementById("statuscafe-username").innerHTML = '&lt;a href="https://status.cafe/users/USERNAME" target="_blank"&gt; DESIRED INFO HERE &lt;/a&gt; ' + r.face + ' ' + r.timeAgo</div>
+    </li>
+    <li><b>To remove the username:</b> you mainly need to remove the a href link. your code should start with r.face if doing this. r.face is the emoji you add to your status. below is an example code:
+        <div class="fakearea" contenteditable="true"> document.getElementById("statuscafe-username").innerHTML = r.face + ' ' + r.timeAgo</div>
+</li>
+</ol>
+
+<h2 class="grad italics">Removing the emoji</h2>
+<ol>
+    <li>In your site-hosted status cafe js file, look for the section containing <mark>r.face</mark></li>
+    <li>To remove this cleanly, make sure you remove <mark> + r.face + ' ' </mark>. Below is the line without this section included for you to take:
+    <div class="fakearea" contenteditable="true">     document.getElementById("statuscafe-username").innerHTML = '&lt;a href="https://status.cafe/users/USERNAME" target="_blank"&gt;' + r.author + '&lt;/a&gt; ' + r.timeAgo</div>
+    </li>
+</ol>

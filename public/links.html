@@ -1,0 +1,3126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="darkreader-lock" content="">
+    <title>loveberry ♡ links</title>
+    
+  <link rel="icon" type="image/x-icon" href="/assets/images/berry.ico">
+  <link rel="shortcut icon" href="/assets/images/berry.ico" type="image/x-icon">
+
+  <!-- METADATA -->
+  <meta name="description" content="loveberry - your home for website resources">
+  <meta name="theme-color" content="#f9a5b9">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/links.css">    
+    <script src="https://loveberry.nekoweb.org/assets/js/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+<body>
+
+<div class="sidebar">  
+<div class="buttonadj">
+    <button type="button" data-theme-toggle aria-label="Change to light theme" class="decocorner"> </button>
+    <script>
+      /**
+      * Utility function to calculate the current theme setting.
+      * Look for a local storage value.
+      * Fall back to system setting.
+      * Fall back to light mode.
+      */
+      function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+        if (localStorageTheme !== null) {
+          return localStorageTheme;
+        }
+    
+        if (systemSettingDark.matches) {
+          return "dark";
+        }
+    
+        return "light";
+      }
+    
+      /**
+      * Utility function to update the button text, aria-label, and toggle class.
+      */
+      // Modified updateButton to accept an optional "animate" flag
+function updateButton({ buttonEl, isDark, animate = true }) {
+  const newCta = isDark ? "Change to light theme" : "Change to dark theme";
+  buttonEl.setAttribute("aria-label", newCta);
+
+  if (animate) {
+    buttonEl.classList.remove("on", "off");
+    void buttonEl.offsetWidth;
+    buttonEl.classList.add(isDark ? "on" : "off");
+  } else {
+    // Ensure no animation classes are set initially
+    buttonEl.classList.remove("on", "off");
+  }
+}
+    
+      /**
+      * Utility function to update the theme setting on the html tag
+      */
+      function updateThemeOnHtmlEl({ theme }) {
+        document.querySelector("html").setAttribute("data-theme", theme);
+      }
+    
+      /**
+      * On page load:
+      */
+    
+      // 1. Grab what we need from the DOM and system settings on page load
+      const button = document.querySelector("[data-theme-toggle]");
+      const localStorageTheme = localStorage.getItem("theme");
+      const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+    
+      // 2. Work out the current site settings
+      let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+    
+      
+      // 3. Update the theme setting and button text/class according to current settings
+      updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark", animate: false });
+      updateThemeOnHtmlEl({ theme: currentThemeSetting });
+    
+      // 4. Add an event listener to toggle the 
+      button.addEventListener("click", () => {
+  const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+
+  localStorage.setItem("theme", newTheme);
+  updateButton({ buttonEl: button, isDark: newTheme === "dark", animate: true });
+  updateThemeOnHtmlEl({ theme: newTheme });
+
+  currentThemeSetting = newTheme;
+});
+    </script>
+    </div>
+<nav>
+<ul class="nav">
+    <li><a href="/">Home</a></li>
+    <li><a href="/resources">Resources</a></li>
+    <li><a href="/links">Links</a></li>
+    <li><a href="https://layercake.nekoweb.org">Creator</a></li>
+</ul>
+</nav>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var currentSlug = window.location.pathname;
+    if (!currentSlug.endsWith('/')) {
+      currentSlug += '/';
+    }
+
+    var navLinks = document.querySelectorAll('.nav a');
+
+    navLinks.forEach(function(link) {
+      var linkHref = link.getAttribute('href');
+      if (!linkHref.startsWith('/')) return;
+
+      if (!linkHref.endsWith('/')) {
+        linkHref += '/';
+      }
+      if (linkHref === '/' && currentSlug !== '/') return;
+      if (currentSlug.startsWith(linkHref)) {
+        link.parentElement.classList.add('activenavi');
+      }
+    });
+  });
+</script>
+
+<div class="foot">
+  <span style="font-weight:bold">(c) Loveberry 2023 - 2025</span> <br> <span style="font-weight:normal; font-style:italic">If things are broken, use CTRL + Shift + R or equivalent to refresh cache.</span>
+</div>
+
+
+</div>
+<div class="content">
+    <div class="main">
+        
+    <header>
+        
+        <div class="marquee">
+            <ul class="marquee__content">
+              <li><h1>Loveberry</h1></li>
+              <li aria-hidden="true"><h1>Loveberry</h1></li>
+              <li aria-hidden="true"><h1>Loveberry</h1></li>
+            </ul>
+            <!-- Mirrors the content above -->
+            <ul class="marquee__content" aria-hidden="true">
+              <li><h1>Loveberry</h1></li>
+              <li><h1>Loveberry</h1></li>
+              <li><h1>Loveberry</h1></li>
+            </ul>
+          </div>
+            </header>
+            <main>
+                <div class="mainb">
+                              <div id="content">
+            <h3 class="grad">Further Resources</h3>
+              <p> Some links that may help you further on your webmaking journey! All are organized or semi-organized into a category I think fits them best, feel free to click the buttons below or use the search bar to find what you're looking for!</p>
+            <div class="note">
+                <div class="noteline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                    <span class="notett">Please Note:</span>
+                </div>
+                <p>I have many links in here, some links may break and/or not work as files are adjusted through a variety of sites, if you see any broken link please let me know on my <a class="outbound" href="https://layercake.nekoweb.org/">Main website</a> and I'll try to either: see where the link is moved to, check the wayback machine for an archived version or remove the link! Thank you</p>
+                <p><b> As of the
+                    
+                    
+                    
+                    
+                    
+                    13th of September, 2025, there are 155 links on this page.</b></p>
+            </div>
+              <hr>
+              <div class="search-wrapper">
+              <span class="icon">
+                <i data-lucide="search"></i>
+              </span>              
+              <input id="searchInput" type="text" placeholder="Search the collection...">
+              </div>
+              <hr>
+              <p class="tagsec">Or sort by tag:</p>
+              <div id="filters">
+                  <button class="filtertag active" onclick="filterSelection('all');  noteHide()"><i data-lucide="asterisk"></i> Show all</button>
+                  <button class="filtertag" onclick="filterSelection('basic');  noteHide()"><i data-lucide="code"></i> Basic</button>
+                  <button class="filtertag" onclick="filterSelection('accessibility');  noteHide()"><i data-lucide="accessibility"></i> Accessibility</button>
+                  <button class="filtertag" onclick="filterSelection('generator');  noteHide()"><i data-lucide="cog"></i> Generator</button>
+                  <button class="filtertag" onclick="filterSelection('template');  noteHide()"><i data-lucide="layout-panel-top"></i> Template</button>
+                  <button class="filtertag" onclick="filterSelection('snippet');  noteHide()"><i data-lucide="scissors"></i> Snippets</button>
+                  <button class="filtertag" onclick="filterSelection('libraries');  noteHide()"><i data-lucide="library-big"></i> Libraries</button>
+                  <button class="filtertag" onclick="filterSelection('programs');  noteHide()"><i data-lucide="laptop-minimal"></i> Programs</button>
+                  <button class="filtertag" onclick="filterSelection('fonts');  noteHide()"><i data-lucide="type"></i> Fonts</button>
+                  <button class="filtertag" onclick="filterSelection('graphics');  noteHide()"><i data-lucide="image"></i> Graphics</button>
+                  <button class="filtertag" onclick="filterSelection('misc');  noteHide()"><i data-lucide="archive"></i> Misc</button>
+                  <button class="filtertag" onclick="filterSelection('junefave'); juneNote()"><i data-lucide="cake-slice"></i> June's Favourites</button>
+                </div>
+                
+  <hr>
+  <section id="junenote" class="postdir note">
+    <div class="noteline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+        <span class="notett">Please Note:</span>
+    </div>
+    <p>These are all the resources I personally tend to use or enjoy a lot.</p>
+</section>
+
+
+<section class="postdir filterDiv basic snippets junefave ">
+    <a class="outbound faketitlelink" href="https://www.w3schools.com/">
+        
+          https://www.w3schools.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Lots of easy beginner stuff as well as some snippets to help you learn</p>
+  </section>
+  
+<section class="postdir filterDiv basic junefave ">
+    <a class="outbound faketitlelink" href="https://developer.mozilla.org/en-US/">
+        
+          https://developer.mozilla.org/en-US/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A good HTML/CSS/JS reference site</p>
+  </section>
+  
+<section class="postdir filterDiv basic misc ">
+    <a class="outbound faketitlelink" href="https://stackoverflow.com/tags">
+        
+          https://stackoverflow.com/tags
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A place where you can ask questions on how to do things, it's been around for a while so make sure to search for your query first before asking</p>
+  </section>
+  
+<section class="postdir filterDiv programs ">
+    <a class="outbound faketitlelink" href="https://jsfiddle.net/">
+        
+          https://jsfiddle.net/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="laptop-minimal"></i> Programs
+      </span>
+      
+    
+    <p class="nmbp">Like Codepen (online code editor) but you don't need an account</p>
+  </section>
+  
+<section class="postdir filterDiv basic snippets junefave ">
+    <a class="outbound faketitlelink" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">
+        
+          https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Easy and quick sheet giving a quick rundown of flexbox related things</p>
+  </section>
+  
+<section class="postdir filterDiv basic ">
+    <a class="outbound faketitlelink" href="https://websitesetup.org/css3-cheat-sheet/">
+        
+          https://websitesetup.org/css3-cheat-sheet/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+    
+    <p class="nmbp">A huge CSS cheat sheet</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://boxshadows.xyz/">
+        
+          https://boxshadows.xyz/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">A box shadow generator</p>
+  </section>
+  
+<section class="postdir filterDiv generator junefave ">
+    <a class="outbound faketitlelink" href="http://owumaro.github.io/text-stroke-generator/">
+        
+          http://owumaro.github.io/text-stroke-generator/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A text stroke generator using text shadow</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://www.shecodes.io/css_generators/css-transform-generator">
+        
+          https://www.shecodes.io/css_generators/css-transform-generator
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">A CSS transformations generator</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://www.useragentman.com/matrix/">
+        
+          https://www.useragentman.com/matrix/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">A CSS matrix (3d) generator</p>
+  </section>
+  
+<section class="postdir filterDiv generator junefave ">
+    <a class="outbound faketitlelink" href="https://9elements.github.io/fancy-border-radius/full-control">
+        
+          https://9elements.github.io/fancy-border-radius/full-control
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A border radius generator that gives you control over 8 points, makes it easier to create unique shapes</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://bennettfeely.com/clippy/">
+        
+          https://bennettfeely.com/clippy/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">A CSS clip-path maker</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://cssgradient.io/">
+        
+          https://cssgradient.io/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">A CSS gradient maker</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://www.lipsum.com/">
+        
+          https://www.lipsum.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">Generates a bunch of lorem ipsum text based on how many paragraphs of it you want, great for placeholder stuff</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://www.stuffbydavid.com/textcolorizer">
+        
+          https://www.stuffbydavid.com/textcolorizer
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">BBCode and HTML text colouriser, creates text gradients by wrapping each letter in a &lt;span&gt; styled in the order of a gradient</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://neumorphism.io/">
+        
+          https://neumorphism.io/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">Allows you to create elements in a neumorphism style</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://kovart.github.io/dashed-border-generator/">
+        
+          https://kovart.github.io/dashed-border-generator/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">Allows you to create custom dashed and dotted borders</p>
+  </section>
+  
+<section class="postdir filterDiv template ">
+    <a class="outbound faketitlelink" href="https://codepen.io/sadness97/full/XJbLxNj">
+        
+          https://codepen.io/sadness97/full/XJbLxNj
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+    
+    <p class="nmbp">Sadgrl's layout builder</p>
+  </section>
+  
+<section class="postdir filterDiv template generator ">
+    <a class="outbound faketitlelink" href="https://petrapixel.neocities.org/coding/layout-generator">
+        
+          https://petrapixel.neocities.org/coding/layout-generator
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">Petrapixel's layout generator, is more accessible than Sadgrl's and has more options</p>
+  </section>
+  
+<section class="postdir filterDiv template ">
+    <a class="outbound faketitlelink" href="https://templaterr.neocities.org/">
+        
+          https://templaterr.neocities.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+    
+    <p class="nmbp">Neocities Layouts</p>
+  </section>
+  
+<section class="postdir filterDiv template ">
+    <a class="outbound faketitlelink" href="https://eggramen.neocities.org/code/css_testpages">
+        
+          https://eggramen.neocities.org/code/css_testpages
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+    
+    <p class="nmbp">Eggramen's layouts</p>
+  </section>
+  
+<section class="postdir filterDiv template ">
+    <a class="outbound faketitlelink" href="https://limegreen.neocities.org/templates/wikitable/wikitable">
+        
+          https://limegreen.neocities.org/templates/wikitable/wikitable
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+    
+    <p class="nmbp">A layout mimicing wiki sites like fandom</p>
+  </section>
+  
+<section class="postdir filterDiv generator graphics ">
+    <a class="outbound faketitlelink" href="https://websetsbylynn.neocities.org/">
+        
+          https://websetsbylynn.neocities.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+    
+    <p class="nmbp">Websets by Lynn, featuring graphics, glitter text generators and an 88 x 31 button maker</p>
+  </section>
+  
+<section class="postdir filterDiv template snippets ">
+    <a class="outbound faketitlelink" href="https://zonelets.net/">
+        
+          https://zonelets.net/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">Helps you set up a blog for your site, has some themes you can choose from</p>
+  </section>
+  
+<section class="postdir filterDiv template ">
+    <a class="outbound faketitlelink" href="https://rarebit.neocities.org/">
+        
+          https://rarebit.neocities.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+    
+    <p class="nmbp">Helps you set up a template for your comic</p>
+  </section>
+  
+<section class="postdir filterDiv snippets junefave ">
+    <a class="outbound faketitlelink" href="https://virtualobserver.moe/ayano/comment-widget">
+        
+          https://virtualobserver.moe/ayano/comment-widget
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Lets you add comment sections on your website</p>
+  </section>
+  
+<section class="postdir filterDiv snippets junefave ">
+    <a class="outbound faketitlelink" href="https://frills.dev/blog/231023-add-moderation-to-comment-widget/">
+        
+          https://frills.dev/blog/231023-add-moderation-to-comment-widget/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Frills' moderation add-on for ayano's comment widget</p>
+  </section>
+  
+<section class="postdir filterDiv snippets junefave ">
+    <a class="outbound faketitlelink" href="https://loveberry.nekoweb.org/guide/admin mark/">
+        
+          https://loveberry.nekoweb.org/guide/admin mark/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">My Admin Mark add-on for ayano's comment widget</p>
+  </section>
+  
+<section class="postdir filterDiv snippets junefave ">
+    <a class="outbound faketitlelink" href="https://jbc.lol/tutorials/ayano-pinning/">
+        
+          https://jbc.lol/tutorials/ayano-pinning/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Jb's comment pinning add-on for ayano's comment widget</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://www.dafont.com/">
+        
+          https://www.dafont.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">A font collection database</p>
+  </section>
+  
+<section class="postdir filterDiv fonts junefave ">
+    <a class="outbound faketitlelink" href="https://fonts.google.com/">
+        
+          https://fonts.google.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Google fonts</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://archive.org/download/Fontworks/">
+        
+          https://archive.org/download/Fontworks/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">An archived collection of fontworks fonts</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://fontcity.neocities.org/">
+        
+          https://fontcity.neocities.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">Some fonts hosted on neocities</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://www.tumblr.com/tamapalace/752923986362548225/the-iconic-tamagotchi-connection-font-is-now">
+        
+          https://www.tumblr.com/tamapalace/752923986362548225/the-iconic-tamagotchi-connection-font-is-now
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">The Tamagotchi Connections font</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://www.tumblr.com/gayocto-rey/712271192135008256/official-splatoon-fonts-complete-with-kanji">
+        
+          https://www.tumblr.com/gayocto-rey/712271192135008256/official-splatoon-fonts-complete-with-kanji
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">Splatoon 1 and Splatoon 2 fonts</p>
+  </section>
+  
+<section class="postdir filterDiv generator graphics ">
+    <a class="outbound faketitlelink" href="https://blinkies.cafe/">
+        
+          https://blinkies.cafe/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+    
+    <p class="nmbp">Generate your own blinkies</p>
+  </section>
+  
+<section class="postdir filterDiv graphics ">
+    <a class="outbound faketitlelink" href="https://gifcities.org/">
+        
+          https://gifcities.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+    
+    <p class="nmbp">Animated gifs from geocities</p>
+  </section>
+  
+<section class="postdir filterDiv graphics ">
+    <a class="outbound faketitlelink" href="https://99gifshop.neocities.org/">
+        
+          https://99gifshop.neocities.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+    
+    <p class="nmbp">A gif collection</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility misc ">
+    <a class="outbound faketitlelink" href="https://www.deadlinkchecker.com/website-dead-link-checker.asp">
+        
+          https://www.deadlinkchecker.com/website-dead-link-checker.asp
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">Checks your site for dead links</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://www.browserling.com/tools/text-replace">
+        
+          https://www.browserling.com/tools/text-replace
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A text replacer</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://meyerweb.com/eric/tools/color-blend/#:::hex">
+        
+          https://meyerweb.com/eric/tools/color-blend/#:::hex
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">Blend two colours together</p>
+  </section>
+  
+<section class="postdir filterDiv graphics junefave ">
+    <a class="outbound faketitlelink" href="https://www.spriters-resource.com/">
+        
+          https://www.spriters-resource.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Sprite rips from a wide variety of games</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility misc ">
+    <a class="outbound faketitlelink" href="http://embedresponsively.com/">
+        
+          http://embedresponsively.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">Embeds iframes in a responsive manner</p>
+  </section>
+  
+<section class="postdir filterDiv misc junefave ">
+    <a class="outbound faketitlelink" href="https://www.webdesignmuseum.org/">
+        
+          https://www.webdesignmuseum.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A museum of web design, great for inspiration</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://layouts.spacehey.com/layout?id=85996#/">
+        
+          https://layouts.spacehey.com/layout?id=85996#/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">A working coded Nintendo DS</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://gifypet.neocities.org/">
+        
+          https://gifypet.neocities.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">A pet for your website</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://tamanotchi.world/">
+        
+          https://tamanotchi.world/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">Like a tamagotchi but NOT! can have them chill on your site</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://webneko.net/">
+        
+          https://webneko.net/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">Code for a cat that can follow your cursor</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://www.imood.com/">
+        
+          https://www.imood.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">Share your mood with the world</p>
+  </section>
+  
+<section class="postdir filterDiv snippets junefave ">
+    <a class="outbound faketitlelink" href="https://status.cafe/">
+        
+          https://status.cafe/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Share a status with the world. Wait time to be accepted for an account can sometimes be long.</p>
+  </section>
+  
+<section class="postdir filterDiv snippets junefave ">
+    <a class="outbound faketitlelink" href="https://social.nekoweb.org/">
+        
+          https://social.nekoweb.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A nekoweb social page, similar in manner to status.cafe</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://pollcode.com/">
+        
+          https://pollcode.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">Allows you to add a poll to your website</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://khang-nd.github.io/7.css/">
+        
+          https://khang-nd.github.io/7.css/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">CSS framework recreating Windows 7</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://botoxparty.github.io/XP.css/">
+        
+          https://botoxparty.github.io/XP.css/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">CSS Framework recreating Windows XP</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://jdan.github.io/98.css/">
+        
+          https://jdan.github.io/98.css/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">CSS Framework recreating Windows 98</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://sakofchit.github.io/system.css/">
+        
+          https://sakofchit.github.io/system.css/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">CSS Framework based on System 6 of Apples OS system</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://thesimscss.inbn.dev/">
+        
+          https://thesimscss.inbn.dev/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">CSS Framework based on Sims 1</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://nielssp.github.io/classic-stylesheets/">
+        
+          https://nielssp.github.io/classic-stylesheets/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">CSS Frameworks based on different operating systems</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://michalsnik.github.io/aos/">
+        
+          https://michalsnik.github.io/aos/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">Allows things to be animated as you scroll down</p>
+  </section>
+  
+<section class="postdir filterDiv programs ">
+    <a class="outbound faketitlelink" href="https://code.visualstudio.com/">
+        
+          https://code.visualstudio.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="laptop-minimal"></i> Programs
+      </span>
+      
+    
+    <p class="nmbp">A code editor</p>
+  </section>
+  
+<section class="postdir filterDiv programs junefave ">
+    <a class="outbound faketitlelink" href="https://vscodium.com/">
+        
+          https://vscodium.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="laptop-minimal"></i> Programs
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A code editor</p>
+  </section>
+  
+<section class="postdir filterDiv programs junefave ">
+    <a class="outbound faketitlelink" href="https://brackets.io/">
+        
+          https://brackets.io/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="laptop-minimal"></i> Programs
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A code editor</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://www.gameuidatabase.com/">
+        
+          https://www.gameuidatabase.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A database of game UI's, good for inspiration</p>
+  </section>
+  
+<section class="postdir filterDiv misc snippets ">
+    <a class="outbound faketitlelink" href="https://piclog.blue/">
+        
+          https://piclog.blue/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">Share (heavily compressed) pictures with your friends</p>
+  </section>
+  
+<section class="postdir filterDiv basic accessibility ">
+    <a class="outbound faketitlelink" href="https://validator.w3.org/">
+        
+          https://validator.w3.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">A HTML validator</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://www.dragonflycave.com/free-quiz-scripts">
+        
+          https://www.dragonflycave.com/free-quiz-scripts
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">Scripts to make a quiz on your website</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://fonts.google.com/icons">
+        
+          https://fonts.google.com/icons
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">Googles material icons</p>
+  </section>
+  
+<section class="postdir filterDiv libraries junefave ">
+    <a class="outbound faketitlelink" href="https://lucide.dev/">
+        
+          https://lucide.dev/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Lucide icons</p>
+  </section>
+  
+<section class="postdir filterDiv basic accessibility misc junefave ">
+    <a class="outbound faketitlelink" href="https://contrast-triangle.com/">
+        
+          https://contrast-triangle.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">An accessibility resource that makes sure you have enough contrast between the background, link text and normal text if you're removing the underline from the link</p>
+  </section>
+  
+<section class="postdir filterDiv template ">
+    <a class="outbound faketitlelink" href="https://www.w3schools.com/css/css_templates.asp">
+        
+          https://www.w3schools.com/css/css_templates.asp
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+    
+    <p class="nmbp">W3Schools responsive templates</p>
+  </section>
+  
+<section class="postdir filterDiv template ">
+    <a class="outbound faketitlelink" href="https://www.beepbird.net/freebies/site-templates/website-templates.html">
+        
+          https://www.beepbird.net/freebies/site-templates/website-templates.html
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+    
+    <p class="nmbp">Beepbird's responsive templates</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://kalechips.net/projects/snippets">
+        
+          https://kalechips.net/projects/snippets
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">Kalechips code snippets</p>
+  </section>
+  
+<section class="postdir filterDiv template ">
+    <a class="outbound faketitlelink" href="https://kalechips.net/projects/layouts/">
+        
+          https://kalechips.net/projects/layouts/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+    
+    <p class="nmbp">Kalechips responsive layouts</p>
+  </section>
+  
+<section class="postdir filterDiv snippets misc ">
+    <a class="outbound faketitlelink" href="https://kalechips.net/projects/code/">
+        
+          https://kalechips.net/projects/code/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">Kalechips coding projects, including: a fake but accessible listography clone (with added features), a gallery genertator as well as some PHP snippets</p>
+  </section>
+  
+<section class="postdir filterDiv template ">
+    <a class="outbound faketitlelink" href="https://punkwasp.neocities.org/creations/templates/">
+        
+          https://punkwasp.neocities.org/creations/templates/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+    
+    <p class="nmbp">Punkwasp's templates</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://animate.style/">
+        
+          https://animate.style/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">A library of css animations</p>
+  </section>
+  
+<section class="postdir filterDiv generator misc ">
+    <a class="outbound faketitlelink" href="https://cupcakeipsum.com/">
+        
+          https://cupcakeipsum.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A lorem ipsum generator but focused around cake</p>
+  </section>
+  
+<section class="postdir filterDiv libraries junefave ">
+    <a class="outbound faketitlelink" href="https://highlightjs.org/">
+        
+          https://highlightjs.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A library which styles syntax within code blocks to be highlighted, used on the code blocks in the resources page of this website</p>
+  </section>
+  
+<section class="postdir filterDiv basic accessibility ">
+    <a class="outbound faketitlelink" href="https://wave.webaim.org/">
+        
+          https://wave.webaim.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">A website which evaluates your code for accessibility errors</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://nownownow.com/about">
+        
+          https://nownownow.com/about
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A website which lists everyone with a 'now' page, a concept which says what a person is focused on at that part of their life.</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://fontstruct.com/fontstructions/show/2611132/fields-of-mistria">
+        
+          https://fontstruct.com/fontstructions/show/2611132/fields-of-mistria
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">Fields of Mistria font.</p>
+  </section>
+  
+<section class="postdir filterDiv snippets junefave ">
+    <a class="outbound faketitlelink" href="https://drawbox.nekoweb.org/">
+        
+          https://drawbox.nekoweb.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Allows you to add a canvas drawing area, where people can draw images and submit them to you</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://bohemiansultriness.nekoweb.org/goodies/keepittidy.txt">
+        
+          https://bohemiansultriness.nekoweb.org/goodies/keepittidy.txt
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">An add-on to drawbox that adds moderation</p>
+  </section>
+  
+<section class="postdir filterDiv basic ">
+    <a class="outbound faketitlelink" href="https://devdocs.io/">
+        
+          https://devdocs.io/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+    
+    <p class="nmbp">API documentaton for any language / framework. You can use the search section for what you're looking for, and download it offline.</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://fontjoy.com/">
+        
+          https://fontjoy.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">A website that helps you with pairing fonts</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://www.freefaces.gallery/">
+        
+          https://www.freefaces.gallery/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">A gallery that curates fonts that are under some kind of free license</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://palitra.app">
+        
+          https://palitra.app
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">Search a brand, and it will give you colour palettes based on that search term</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility generator misc ">
+    <a class="outbound faketitlelink" href="https://randoma11y.com/">
+        
+          https://randoma11y.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A website that generates random accessible colour combinations that meet contrast guidelines</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://fontshare.com/">
+        
+          https://fontshare.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">A font website where all fonts are free for commercial and personal use</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://dirtylinestudio.com/freebies/">
+        
+          https://dirtylinestudio.com/freebies/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">Free fonts from dirtylinestudio</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://uncut.wtf/">
+        
+          https://uncut.wtf/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">Another font related website</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://home.streamlinehq.com/">
+        
+          https://home.streamlinehq.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">The 'ultimate icon library', having lists of many other icon libraries within the website</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://coolshap.es/">
+        
+          https://coolshap.es/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A website with cool abstract shapes you can download and use</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://land-book.com/">
+        
+          https://land-book.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A web design inspiration website</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://www.awwwards.com">
+        
+          https://www.awwwards.com
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A web design inspiration website</p>
+  </section>
+  
+<section class="postdir filterDiv programs ">
+    <a class="outbound faketitlelink" href="https://notepad-plus-plus.org/">
+        
+          https://notepad-plus-plus.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="laptop-minimal"></i> Programs
+      </span>
+      
+    
+    <p class="nmbp">A code editor</p>
+  </section>
+  
+<section class="postdir filterDiv snippets misc ">
+    <a class="outbound faketitlelink" href="https://pixeliana.neocities.org/statuscafe">
+        
+          https://pixeliana.neocities.org/statuscafe
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A quick guide to styling your status cafe page</p>
+  </section>
+  
+<section class="postdir filterDiv basic misc ">
+    <a class="outbound faketitlelink" href="">
+        
+          
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp"></p>
+  </section>
+  
+<section class="postdir filterDiv template ">
+    <a class="outbound faketitlelink" href="https://www.write-on.org/html/builder.html">
+        
+          https://www.write-on.org/html/builder.html
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="layout-panel-top"></i> Template
+      </span>
+      
+    
+    <p class="nmbp">A layout builder</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://toggles.dev/">
+        
+          https://toggles.dev/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">A collection of css toggles, to switch between light and dark mode</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://kushagra.dev/lab/hint/">
+        
+          https://kushagra.dev/lab/hint/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">A css tooltp library</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://cssanimation.io/">
+        
+          https://cssanimation.io/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">A css animation library</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://www.lightgalleryjs.com/">
+        
+          https://www.lightgalleryjs.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">A javascript lightbox image and video library</p>
+  </section>
+  
+<section class="postdir filterDiv misc junefave ">
+    <a class="outbound faketitlelink" href="https://11ty.rocks/posts/create-your-first-basic-11ty-website/">
+        
+          https://11ty.rocks/posts/create-your-first-basic-11ty-website/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A guide to set up your first basic 11ty website, I personally used this to get started and it helped me a lot</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://webcode.tools/">
+        
+          https://webcode.tools/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">Has a bunch of different generators, from stuff like meta tags too helping with border stuff</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://slashpages.net/">
+        
+          https://slashpages.net/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A list of 'slash pages' that you can add to your website, such as /now and /chipotle</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility ">
+    <a class="outbound faketitlelink" href="https://solaria.neocities.org/accessibility">
+        
+          https://solaria.neocities.org/accessibility
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">Solaria's guide to web accessibility</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility ">
+    <a class="outbound faketitlelink" href="https://www.w3.org/TR/WCAG22/">
+        
+          https://www.w3.org/TR/WCAG22/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">WCAG 2.2 web accessibility standards</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility ">
+    <a class="outbound faketitlelink" href="https://www.w3.org/WAI/WCAG22/quickref/">
+        
+          https://www.w3.org/WAI/WCAG22/quickref/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">WCAG 2.2 web accessibility quick reference</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility ">
+    <a class="outbound faketitlelink" href="https://www.w3.org/WAI/WCAG22/Understanding/">
+        
+          https://www.w3.org/WAI/WCAG22/Understanding/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">WCAG 2.2 web accessibility understanding the documentaton with explanations of the WCAG guidelines and success criteria</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility ">
+    <a class="outbound faketitlelink" href="https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/">
+        
+          https://ialabs.ie/what-is-the-difference-between-wcag-a-aa-and-aaa/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">Outlines the difference between WCAG A, AA and AAA accessibility criteria iin a simple to understand way</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility ">
+    <a class="outbound faketitlelink" href="https://support.freedomscientific.com/Downloads/JAWS">
+        
+          https://support.freedomscientific.com/Downloads/JAWS
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">One of the most popular screenreader softwares</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility ">
+    <a class="outbound faketitlelink" href="https://www.nvaccess.org/download/">
+        
+          https://www.nvaccess.org/download/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">The other one of the most popular screenreader softwares</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility ">
+    <a class="outbound faketitlelink" href="https://trace.umd.edu/peat/">
+        
+          https://trace.umd.edu/peat/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">Photosensitivity analysis tool.</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility ">
+    <a class="outbound faketitlelink" href="https://poet.diagramcenter.org/how.html">
+        
+          https://poet.diagramcenter.org/how.html
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">Training for how too write good alt text</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility ">
+    <a class="outbound faketitlelink" href="https://sleepydev.neocities.org/posts/5%20Ways%20to%20make%20your%20Neocities%20site%20more%20accessible">
+         
+          https://sleepydev.neocities.org/posts/5 Ways to make your Neocities site more accessible
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+    
+    <p class="nmbp">Different ways you can make your site accessible, mainly focuses on more simple beginner level stuff.</p>
+  </section>
+  
+<section class="postdir filterDiv basic ">
+    <a class="outbound faketitlelink" href="https://content-security-policy.neocities.org/">
+        
+          https://content-security-policy.neocities.org/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+    
+    <p class="nmbp">A page which outlines how the content security policy works on neocities for free accounts</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility junefave ">
+    <a class="outbound faketitlelink" href="https://www.npmjs.com/package/freezeframe">
+        
+          https://www.npmjs.com/package/freezeframe
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">NPM's page on freezeframe.js, I find it easier to navigate the documentation on this page rather than the github repo</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://candy.wavebeem.com/">
+        
+          https://candy.wavebeem.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">A cute looking CSS framework</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://codeadrian.github.io/clay.css/">
+        
+          https://codeadrian.github.io/clay.css/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">A clay style CSS framework</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://nostalgic-css.github.io/NES.css/">
+        
+          https://nostalgic-css.github.io/NES.css/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">A NES styled CSS framework</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://sakofchit.github.io/system.css/">
+        
+          https://sakofchit.github.io/system.css/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">A retro apple styled CSS framework</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://www.getpapercss.com/">
+        
+          https://www.getpapercss.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">A paper styled CSS framework</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://concrete.style/">
+        
+          https://concrete.style/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">A simple CSS framework</p>
+  </section>
+  
+<section class="postdir filterDiv misc junefave ">
+    <a class="outbound faketitlelink" href="https://brisray.com/web/webring-list.htm">
+        
+          https://brisray.com/web/webring-list.htm
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A listing of webrings for you to join</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://motherfuckingwebsite.com/">
+        
+          https://motherfuckingwebsite.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">The 'motherfucking website' that's satire and often used to highlight issues with overdesigning, slow and unresponsive sites</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="http://bettermotherfuckingwebsite.com/">
+        
+          http://bettermotherfuckingwebsite.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">The 'better motherfucking website' that builds on the first one, showing how minimal css can improve a website</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://perfectmotherfuckingwebsite.com">
+        
+          https://perfectmotherfuckingwebsite.com
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">The final site of the 'motherfucking website' saga. This one outlines adding a language tag and a dark mode media query</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility junefave ">
+    <a class="outbound faketitlelink" href="https://www.whocanuse.com/">
+        
+          https://www.whocanuse.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A color contrast tool that gives your combination a grade based on WCAG AA and AAA criteria, also has sections to see what the colour combination is like for those with different vision related issues</p>
+  </section>
+  
+<section class="postdir filterDiv graphics ">
+    <a class="outbound faketitlelink" href="https://hekate2.github.io/website-tools/archive/backgrounds.html">
+        
+          https://hekate2.github.io/website-tools/archive/backgrounds.html
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+    
+    <p class="nmbp">A collection of different backgrounds</p>
+  </section>
+  
+<section class="postdir filterDiv graphics ">
+    <a class="outbound faketitlelink" href="https://www.glitter-graphics.com/">
+        
+          https://www.glitter-graphics.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+    
+    <p class="nmbp">A collection of different graphics</p>
+  </section>
+  
+<section class="postdir filterDiv graphics ">
+    <a class="outbound faketitlelink" href="https://gothiclolita.neocities.org/materials">
+        
+          https://gothiclolita.neocities.org/materials
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+    
+    <p class="nmbp">A collection of different graphics</p>
+  </section>
+  
+<section class="postdir filterDiv graphics ">
+    <a class="outbound faketitlelink" href="https://internetbumperstickers.com/frontbumper/">
+        
+          https://internetbumperstickers.com/frontbumper/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+    
+    <p class="nmbp">A collection of internet bumper stickers</p>
+  </section>
+  
+<section class="postdir filterDiv graphics ">
+    <a class="outbound faketitlelink" href="http://da-lace.com/">
+        
+          http://da-lace.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+    
+    <p class="nmbp">A Japanese site with a bunch of lace images</p>
+  </section>
+  
+<section class="postdir filterDiv graphics ">
+    <a class="outbound faketitlelink" href="https://mouseling.net/sozai/">
+        
+          https://mouseling.net/sozai/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="image"></i> Graphics
+      </span>
+      
+    
+    <p class="nmbp">mouseling.net's sozai directory</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility misc ">
+    <a class="outbound faketitlelink" href="https://caniuse.com/">
+        
+          https://caniuse.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A website that shows which browser can use which (css) properties, great for checking cross-browser support</p>
+  </section>
+  
+<section class="postdir filterDiv basic misc ">
+    <a class="outbound faketitlelink" href="https://nenrikido.neocities.org/blog/post/making-a-preloader/">
+        
+          https://nenrikido.neocities.org/blog/post/making-a-preloader/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">nenrikido's guide to making a preloader for your website</p>
+  </section>
+  
+<section class="postdir filterDiv generator junefave ">
+    <a class="outbound faketitlelink" href="https://jbcarreon123.nekoweb.org/utils/split-it/">
+        
+          https://jbcarreon123.nekoweb.org/utils/split-it/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A generator that puts <span> tags around each letter of a word you've put in but can be customised to other options, super helpful for stuff like tumblr wobble and princess text</p>
+  </section>
+  
+<section class="postdir filterDiv basic ">
+    <a class="outbound faketitlelink" href="https://cssgridgarden.com/">
+        
+          https://cssgridgarden.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+    
+    <p class="nmbp">A game to help you learn CSS grid</p>
+  </section>
+  
+<section class="postdir filterDiv basic ">
+    <a class="outbound faketitlelink" href="https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/">
+        
+          https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+    
+    <p class="nmbp">An interactive guide to help you learn flexbox</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://xobyte.org/ThemeWizard/">
+        
+          https://xobyte.org/ThemeWizard/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">Xobyte's theme wizard, allows you to switch between different CSS stylesheets depending on the theme picked</p>
+  </section>
+  
+<section class="postdir filterDiv basic misc ">
+    <a class="outbound faketitlelink" href="https://www.joshwcomeau.com/css/custom-css-reset/">
+        
+          https://www.joshwcomeau.com/css/custom-css-reset/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">Josh's version of a modern CSS reset</p>
+  </section>
+  
+<section class="postdir filterDiv fonts ">
+    <a class="outbound faketitlelink" href="https://shantellsans.com/">
+        
+          https://shantellsans.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="type"></i> Fonts
+      </span>
+      
+    
+    <p class="nmbp">A free marker-style font</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://www.javascriptfreecode.com/36.htm">
+        
+          https://www.javascriptfreecode.com/36.htm
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">A javascript calendar</p>
+  </section>
+  
+<section class="postdir filterDiv generator ">
+    <a class="outbound faketitlelink" href="https://uigradients.com/">
+        
+          https://uigradients.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="cog"></i> Generator
+      </span>
+      
+    
+    <p class="nmbp">A site which has a list of different gradients and hex codes for you to use</p>
+  </section>
+  
+<section class="postdir filterDiv libraries ">
+    <a class="outbound faketitlelink" href="https://tablericons.com/">
+        
+          https://tablericons.com/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="library-big"></i> Libraries
+      </span>
+      
+    
+    <p class="nmbp">Tabler icons</p>
+  </section>
+  
+<section class="postdir filterDiv accessibility junefave ">
+    <a class="outbound faketitlelink" href="https://pagespeed.web.dev/">
+        
+          https://pagespeed.web.dev/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="accessibility"></i> Accessibility
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A page which measures your sites' performance, accessibility, best practices and SEO for both mobile and desktop, as well as tells you how to improve your score</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://component.gallery/">
+        
+          https://component.gallery/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">A gallery of components you can add to your site, be mindful of the 'tech' tag for what it's coded in</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://tinytools.directory/">
+        
+          https://tinytools.directory/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A directory of different tools for different things</p>
+  </section>
+  
+<section class="postdir filterDiv snippets ">
+    <a class="outbound faketitlelink" href="https://dimden.dev/moonwidget/">
+        
+          https://dimden.dev/moonwidget/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="scissors"></i> Snippets
+      </span>
+      
+    
+    <p class="nmbp">A moon widget you can embed onto your site</p>
+  </section>
+  
+<section class="postdir filterDiv basic junefave ">
+    <a class="outbound faketitlelink" href="https://www.w3schools.com/cssref/css_default_values.php">
+        
+          https://www.w3schools.com/cssref/css_default_values.php
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">A list of the basic semantic components and their default css styling</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://una.im/color-mix-opacity/">
+        
+          https://una.im/color-mix-opacity/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">Covering the color mix component</p>
+  </section>
+  
+<section class="postdir filterDiv basic junefave ">
+    <a class="outbound faketitlelink" href="https://www.w3schools.com/jsref/default.asp">
+        
+          https://www.w3schools.com/jsref/default.asp
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="code"></i> Basic
+      </span>
+      
+        <span class="linksorted">|</span>
+      
+    
+      <span class="linksorted">
+        <i data-lucide="cake-slice"></i> June's Favourites
+      </span>
+      
+    
+    <p class="nmbp">Js reference by category</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://github.com/goabstract/Awesome-Design-Tools">
+        
+          https://github.com/goabstract/Awesome-Design-Tools
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">A masterlist of different tools you can use</p>
+  </section>
+  
+<section class="postdir filterDiv misc ">
+    <a class="outbound faketitlelink" href="https://melankorin.net/links/library/">
+        
+          https://melankorin.net/links/library/
+        
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    
+      <span class="linksorted">
+        <i data-lucide="archive"></i> Misc
+      </span>
+      
+    
+    <p class="nmbp">Melankorin's list of links</p>
+  </section>
+  
+  
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("filters");
+    var btns = btnContainer.getElementsByClassName("filtertag");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+
+    function juneNote() {
+        document.getElementById('junenote').style.display = 'block';
+    }
+
+    function noteHide() {
+        document.getElementById('junenote').style.display = 'none';
+    }
+    </script>
+<script> lucide.createIcons(); </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const input = document.getElementById('searchInput');
+      const sections = document.querySelectorAll('.postdir');
+  
+      input.addEventListener('input', function () {
+        const query = input.value.toLowerCase();
+  
+        sections.forEach(function (section) {
+          const text = section.innerText.toLowerCase();
+          if (text.includes(query)) {
+            section.style.display = '';
+          } else {
+            section.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>  
+                </div>
+</main>
+    </div>
+</div>
+
+</body>
+</html>

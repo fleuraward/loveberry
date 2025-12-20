@@ -1,0 +1,13 @@
+{
+    "Basic": { "class": "basic", "icon": "code" },
+    "Accessibility": { "class": "accessibility", "icon": "accessibility" },
+    "Generator": { "class": "generator", "icon": "cog" },
+    "Template": { "class": "template", "icon": "layout-panel-top" },
+    "Snippets": { "class": "snippets", "icon": "scissors" },
+    "Libraries": { "class": "libraries", "icon": "library-big" },
+    "Programs": { "class": "programs", "icon": "laptop-minimal" },
+    "Fonts": { "class": "fonts", "icon": "type" },
+    "Graphics": { "class": "graphics", "icon": "image" },
+    "Misc": { "class": "misc", "icon": "archive" },
+    "June's Favourites": { "class": "junefave", "icon": "cake-slice" }
+  }  

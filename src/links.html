@@ -1,0 +1,155 @@
+---
+title: links
+layout: base.njk
+cssFile: <link rel="stylesheet" href="/assets/css/links.css">
+lucide: <script src="https://loveberry.nekoweb.org/assets/js/lucide.js"></script>
+---
+      <div id="content">
+            <h3 class="grad">Further Resources</h3>
+              <p> Some links that may help you further on your webmaking journey! All are organized or semi-organized into a category I think fits them best, feel free to click the buttons below or use the search bar to find what you're looking for!</p>
+            <div class="note">
+                <div class="noteline">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                    <span class="notett">Please Note:</span>
+                </div>
+                <p>I have many links in here, some links may break and/or not work as files are adjusted through a variety of sites, if you see any broken link please let me know on my <a class="outbound" href="https://layercake.nekoweb.org/">Main website</a> and I'll try to either: see where the link is moved to, check the wayback machine for an archived version or remove the link! Thank you</p>
+                <p><b> As of the
+                    
+                    {% assign day = linksLastModified | date: "%-d" %}
+                    {% assign suffix = "th" %}
+                    {% case day %}
+                      {% when "1" or "21" or "31" %} {% assign suffix = "st" %}
+                      {% when "2" or "22" %} {% assign suffix = "nd" %}
+                      {% when "3" or "23" %} {% assign suffix = "rd" %}
+                    {% endcase %}
+                    
+                    {{ day }}{{ suffix }} of {{ linksLastModified | date: "%B, %Y" }}, there are {{ links | size }} links on this page.</b></p>
+            </div>
+              <hr>
+              <div class="search-wrapper">
+              <span class="icon">
+                <i data-lucide="search"></i>
+              </span>              
+              <input id="searchInput" type="text" placeholder="Search the collection...">
+              </div>
+              <hr>
+              <p class="tagsec">Or sort by tag:</p>
+              <div id="filters">
+                  <button class="filtertag active" onclick="filterSelection('all');  noteHide()"><i data-lucide="asterisk"></i> Show all</button>
+                  <button class="filtertag" onclick="filterSelection('basic');  noteHide()"><i data-lucide="code"></i> Basic</button>
+                  <button class="filtertag" onclick="filterSelection('accessibility');  noteHide()"><i data-lucide="accessibility"></i> Accessibility</button>
+                  <button class="filtertag" onclick="filterSelection('generator');  noteHide()"><i data-lucide="cog"></i> Generator</button>
+                  <button class="filtertag" onclick="filterSelection('template');  noteHide()"><i data-lucide="layout-panel-top"></i> Template</button>
+                  <button class="filtertag" onclick="filterSelection('snippet');  noteHide()"><i data-lucide="scissors"></i> Snippets</button>
+                  <button class="filtertag" onclick="filterSelection('libraries');  noteHide()"><i data-lucide="library-big"></i> Libraries</button>
+                  <button class="filtertag" onclick="filterSelection('programs');  noteHide()"><i data-lucide="laptop-minimal"></i> Programs</button>
+                  <button class="filtertag" onclick="filterSelection('fonts');  noteHide()"><i data-lucide="type"></i> Fonts</button>
+                  <button class="filtertag" onclick="filterSelection('graphics');  noteHide()"><i data-lucide="image"></i> Graphics</button>
+                  <button class="filtertag" onclick="filterSelection('misc');  noteHide()"><i data-lucide="archive"></i> Misc</button>
+                  <button class="filtertag" onclick="filterSelection('junefave'); juneNote()"><i data-lucide="cake-slice"></i> June's Favourites</button>
+                </div>
+                
+  <hr>
+  <section id="junenote" class="postdir note">
+    <div class="noteline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-info-icon lucide-info"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+        <span class="notett">Please Note:</span>
+    </div>
+    <p>These are all the resources I personally tend to use or enjoy a lot.</p>
+</section>
+
+{% for item in links %}
+<section class="postdir filterDiv {% for tag in item.tags %}{{ tags[tag].class }} {% endfor %}">
+    <a class="outbound faketitlelink" href="{{ item.url }}">
+        {% if item.title %} 
+          {{ item.title }}
+        {% else %}
+          {{ item.url }}
+        {% endif %}
+      </a><br>
+    <span class="nmbp">Tagged as:</span>
+    {% for tag in item.tags %}
+      <span class="linksorted">
+        <i data-lucide="{{ tags[tag].icon }}"></i> {{ tag }}
+      </span>
+      {% unless forloop.last %}
+        <span class="linksorted">|</span>
+      {% endunless %}
+    {% endfor %}
+    <p class="nmbp">{{ item.description }}</p>
+  </section>
+  {% endfor %}
+  
+<script>
+    filterSelection("all")
+    function filterSelection(c) {
+      var x, i;
+      x = document.getElementsByClassName("filterDiv");
+      if (c == "all") c = "";
+      for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+      }
+    }
+    
+    function w3AddClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+      }
+    }
+    
+    function w3RemoveClass(element, name) {
+      var i, arr1, arr2;
+      arr1 = element.className.split(" ");
+      arr2 = name.split(" ");
+      for (i = 0; i < arr2.length; i++) {
+        while (arr1.indexOf(arr2[i]) > -1) {
+          arr1.splice(arr1.indexOf(arr2[i]), 1);     
+        }
+      }
+      element.className = arr1.join(" ");
+    }
+    
+    // Add active class to the current button (highlight it)
+    var btnContainer = document.getElementById("filters");
+    var btns = btnContainer.getElementsByClassName("filtertag");
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener("click", function(){
+        var current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace(" active", "");
+        this.className += " active";
+      });
+    }
+
+    function juneNote() {
+        document.getElementById('junenote').style.display = 'block';
+    }
+
+    function noteHide() {
+        document.getElementById('junenote').style.display = 'none';
+    }
+    </script>
+<script> lucide.createIcons(); </script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const input = document.getElementById('searchInput');
+      const sections = document.querySelectorAll('.postdir');
+  
+      input.addEventListener('input', function () {
+        const query = input.value.toLowerCase();
+  
+        sections.forEach(function (section) {
+          const text = section.innerText.toLowerCase();
+          if (text.includes(query)) {
+            section.style.display = '';
+          } else {
+            section.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>  
