@@ -735,14 +735,14 @@ const post_url = "https://social.nekoweb.org/post/?id=";
               hour12: false,
             });
             div.innerHTML += `
-                <div class="nekocafe-post">
-                  <div class="nekocafe-flex">
-                    <img class="nekocafe-pfp" src="${post["image"]}" height="64">
-                    <p class="nekocafe-poster"><a href="${profile_url + nekostatus_username}">June</a></p>
-                  </div>
-                    <p class="nekocafe-text">${post["post"]}</p>
-                    <p class="nekocafe-time">${time}</p>
-                </div>
+                &lt;div class="nekocafe-post"&gt;
+                  &lt;div class="nekocafe-flex"&gt;
+                    &lt;img class="nekocafe-pfp" src="${post["image"]}" height="64"&gt;
+                    &lt;p class="nekocafe-poster"&gt;&lt;a href="${profile_url + nekostatus_username}"&gt;June&lt;/a&gt;&lt;/p&gt;
+                  &lt;/div&gt;
+                    &lt;p class="nekocafe-text"&gt;${post["post"]}&lt;/p&gt;
+                    &lt;p class="nekocafe-time"&gt;${time}&lt;/p&gt;
+                &lt;/div&gt;
             `;
         });
     } catch (error) {
@@ -890,9 +890,9 @@ fetch(statuscafe_feed + statuscafe_username + atom_url)
 
       // if you wanted a different author name you could always replace ${author_name} with whatever you want to show
       statuspost.innerHTML = `
-      <p class="statuscafe-author">${author_name}</p>
-        <p class="statuscafe-content">${content}</p>
-        <div class="statuscafe-date">${post_date}</div>
+      &lt;p class="statuscafe-author"&gt;${author_name}&lt;/p&gt;
+        &lt;p class="statuscafe-content"&gt;${content}&lt;/p&gt;
+        &lt;div class="statuscafe-date"&gt;${post_date}&lt;/div&gt;
       `;
 
       container.appendChild(statuspost);
