@@ -32,7 +32,7 @@ cssFile: <link rel="stylesheet" href="/assets/css/winmp.css">
 <!-- windows music player -->
 <section class="snippetbox"> 
     <div class="snippet">    
-    
+    <h3 style="text-align: center; margin-bottom: 10px"> Windows Music Player </h3>
     <div id="musicplayer">   
         <div class="title-color">
             <div class="actual-title">
@@ -582,4 +582,159 @@ populateDropdown();
 loadTrack(track_index);</code></pre>
     </details>
     
-  </section>
+</section>
+
+
+<!-- social nekoweb org all posts -->
+<section class="snippetbox"> 
+    <div class="snippet demoscroll">    
+    <h3 style="text-align: center; margin-bottom: 10px"> Show all social.nekoweb.org posts </h3>
+    <style>#nekocafe-status {
+      height: 360px;
+      overflow-y: auto;
+    }
+    
+.nekocafe-post:first-of-type {
+  margin-top: 0;
+}
+
+.nekocafe-post:last-of-type {
+  margin-bottom: 0;
+}
+
+.nekocafe-post {
+    padding: 10px;
+    border: 1px solid var(--foreground);
+    margin: 10px 0;
+    background:#ffffff20;
+    box-shadow: 0 0 3px;
+}
+
+.nekocafe-flex {
+    display: flex;
+    gap: 15px;
+}
+
+.nekocafe-pfp {
+  display:block;
+}
+
+.nekocafe-poster {
+  margin:1rem 0;
+  font-size: 2rem;  
+  font-weight: bold;   
+}
+
+.nekocafe-text, .nekocafe-time {
+  margin:1rem 0 0 0;
+}
+    </style>
+      <div id="nekocafe-status"></div>
+      
+    <script>
+    const username = "layercake"; // change the username!!!
+    const posts_url = "https://cafe.frizzbees.dev/get_posts/1?name=";
+    const profile_url = "https://social.nekoweb.org/profile/?view=";
+    const post_url = "https://social.nekoweb.org/post/?id=";
+    (async () => {
+        try {
+            const request = await fetch(posts_url + username);
+            let json = await request.json();
+            const div = document.getElementById("nekocafe-status");
+            div.innerHTML = "";
+            json.forEach(post => {
+                const timestamp = post["timestamp"] * 1000;
+                const time = new Date(timestamp).toUTCString();
+                div.innerHTML += `
+                    <div class="nekocafe-post">
+                      <div class="nekocafe-flex">
+                        <img class="nekocafe-pfp" src="${post["image"]}" height="64">
+                        <p class="nekocafe-poster"><a href="${profile_url + username}">June</a></p>
+                      </div>
+                        <p class="nekocafe-text">${post["post"]}</p>
+                        <p class="nekocafe-time">${time}</p>
+                    </div>
+                `;
+            });
+        } catch (error) {
+            console.error(error);
+        }
+    })();
+    </script>
+
+    </div>
+    <details>
+      <summary>View Code</summary>
+      <span class="martop">CSS:</span>      
+<pre><code class="language-css">.nekocafe-post:first-of-type {
+  margin-top: 0;
+}
+
+.nekocafe-post:last-of-type {
+  margin-bottom: 0;
+}
+
+.nekocafe-post {
+    padding: 10px;
+    border: 1px solid var(--foreground);
+    margin: 10px 0;
+    background:#ffffff20;
+    box-shadow: 0 0 3px;
+}
+
+.nekocafe-flex {
+    display: flex;
+    gap: 15px;
+}
+
+.nekocafe-pfp {
+  display:block;
+}
+
+.nekocafe-poster {
+  margin:1rem 0;
+  font-size: 2rem;  
+  font-weight: bold;   
+}
+
+.nekocafe-text, .nekocafe-time {
+  margin:1rem 0 0 0;
+}</code></pre>
+
+  <span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div id="musicplayer"&gt;   &lt;/div&gt;
+&lt;!-- this is all you need!!! everything else will be added with the javascript --&gt;
+</code></pre>
+    
+<span class="martop">JS:</span>
+<pre><code class="language-js">const username = "layercake"; // change the username!!!
+const posts_url = "https://cafe.frizzbees.dev/get_posts/1?name=";
+const profile_url = "https://social.nekoweb.org/profile/?view=";
+const post_url = "https://social.nekoweb.org/post/?id=";
+(async () => {
+  try {
+    const request = await fetch(posts_url + username);
+    let json = await request.json();
+    const div = document.getElementById("nekocafe-status");
+    div.innerHTML = "";
+    json.forEach(post => {
+      const timestamp = post["timestamp"] * 1000;
+      const time = new Date(timestamp).toUTCString();
+      div.innerHTML += `
+        &lt;div class="nekocafe-post"&gt;
+          &lt;div class="nekocafe-flex"&gt;
+            &lt;img class="nekocafe-pfp" src="${post["image"]}" height="64"&gt;
+            &lt;p class="nekocafe-poster"&gt;&lt;a href="${profile_url + username}"&gt;June&lt;/a&gt;&lt;/p&gt;
+          &lt;/div&gt;
+            &lt;p class="nekocafe-text"&gt;${post["post"]}&lt;/p&gt;
+            &lt;p class="nekocafe-time">${time}&lt;/p&gt;
+        &lt;/div&gt;
+      `;
+    });
+  } catch (error) {
+      console.error(error);
+  }
+})();</code></pre>
+    </details>
+    
+</section>
