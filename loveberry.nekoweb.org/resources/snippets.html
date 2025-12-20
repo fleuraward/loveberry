@@ -786,7 +786,7 @@ loadTrack(track_index);</code></pre>
 <section class="snippetbox"> 
     <div class="snippet demoscroll">    
     <h3 style="text-align: center; margin-bottom: 10px" id="socialnekowidget"> Show all social.nekoweb.org posts </h3>
-    <style>#nekocafe-status {
+    <style>#nekocafe-status, #statuscafe-20-posts {
       height: 360px;
       overflow-y: auto;
     }
@@ -829,24 +829,31 @@ loadTrack(track_index);</code></pre>
       <div id="nekocafe-status"></div>
       
     <script>
-    const username = "layercake"; // change the username!!!
+    const nekostatus_username = "layercake"; // change the username!!!
     const posts_url = "https://cafe.frizzbees.dev/get_posts/1?name=";
     const profile_url = "https://social.nekoweb.org/profile/?view=";
     const post_url = "https://social.nekoweb.org/post/?id=";
     (async () => {
         try {
-            const request = await fetch(posts_url + username);
+            const request = await fetch(posts_url + nekostatus_username);
             let json = await request.json();
             const div = document.getElementById("nekocafe-status");
             div.innerHTML = "";
             json.forEach(post => {
                 const timestamp = post["timestamp"] * 1000;
-                const time = new Date(timestamp).toUTCString();
+                const time = new Date(timestamp).toLocaleString("en-GB", { // en-GB sets it as DAY MONTH, if you want it month day change to en-US
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: false,
+                });
                 div.innerHTML += `
                     <div class="nekocafe-post">
                       <div class="nekocafe-flex">
                         <img class="nekocafe-pfp" src="${post["image"]}" height="64">
-                        <p class="nekocafe-poster"><a href="${profile_url + username}">June</a></p>
+                        <p class="nekocafe-poster"><a href="${profile_url + nekostatus_username}">June</a></p>
                       </div>
                         <p class="nekocafe-text">${post["post"]}</p>
                         <p class="nekocafe-time">${time}</p>
@@ -899,39 +906,198 @@ loadTrack(track_index);</code></pre>
 }</code></pre>
 
   <span class="martop">HTML:</span>
-<pre><code class="language-html">&lt;div id="musicplayer"&gt;   &lt;/div&gt;
+<pre><code class="language-html">&lt;div id="nekocafe-status"&gt;   &lt;/div&gt;
 &lt;!-- this is all you need!!! everything else will be added with the javascript --&gt;
 </code></pre>
     
 <span class="martop">JS:</span>
-<pre><code class="language-js">const username = "layercake"; // change the username!!!
+<pre><code class="language-js">const nekostatus_username = "layercake"; // change the username!!!
 const posts_url = "https://cafe.frizzbees.dev/get_posts/1?name=";
 const profile_url = "https://social.nekoweb.org/profile/?view=";
 const post_url = "https://social.nekoweb.org/post/?id=";
 (async () => {
-  try {
-    const request = await fetch(posts_url + username);
-    let json = await request.json();
-    const div = document.getElementById("nekocafe-status");
-    div.innerHTML = "";
-    json.forEach(post => {
-      const timestamp = post["timestamp"] * 1000;
-      const time = new Date(timestamp).toUTCString();
-      div.innerHTML += `
-        &lt;div class="nekocafe-post"&gt;
-          &lt;div class="nekocafe-flex"&gt;
-            &lt;img class="nekocafe-pfp" src="${post["image"]}" height="64"&gt;
-            &lt;p class="nekocafe-poster"&gt;&lt;a href="${profile_url + username}"&gt;June&lt;/a&gt;&lt;/p&gt;
-          &lt;/div&gt;
-            &lt;p class="nekocafe-text"&gt;${post["post"]}&lt;/p&gt;
-            &lt;p class="nekocafe-time">${time}&lt;/p&gt;
-        &lt;/div&gt;
-      `;
-    });
-  } catch (error) {
-      console.error(error);
-  }
+    try {
+        const request = await fetch(posts_url + nekostatus_username);
+        let json = await request.json();
+        const div = document.getElementById("nekocafe-status");
+        div.innerHTML = "";
+        json.forEach(post => {
+            const timestamp = post["timestamp"] * 1000;
+            const time = new Date(timestamp).toLocaleString("en-GB", { // en-GB sets it as DAY MONTH, if you want it month day change to en-US
+              day: "numeric",
+              month: "long",
+              year: "numeric",
+              hour: "2-digit",
+              minute: "2-digit",
+              hour12: false,
+            });
+            div.innerHTML += `
+                <div class="nekocafe-post">
+                  <div class="nekocafe-flex">
+                    <img class="nekocafe-pfp" src="${post["image"]}" height="64">
+                    <p class="nekocafe-poster"><a href="${profile_url + nekostatus_username}">June</a></p>
+                  </div>
+                    <p class="nekocafe-text">${post["post"]}</p>
+                    <p class="nekocafe-time">${time}</p>
+                </div>
+            `;
+        });
+    } catch (error) {
+        console.error(error);
+    }
 })();</code></pre>
+    </details>
+    
+</section>
+
+<!-- status cafe 20 posts -->
+<section class="snippetbox"> 
+    <div class="snippet demoscroll">    
+    <h3 style="text-align: center; margin-bottom: 10px" id="statuscafe20"> Shows 20 status.cafe posts (all that shows on the .atom feed im sorry i tried) </h3>
+    <style>.statuscafe-post:first-of-type {
+  margin-top: 0;
+}
+
+.statuscafe-post:last-of-type {
+  margin-bottom: 0;
+}
+
+.statuscafe-post {
+    padding: 10px;
+    border: 1px solid var(--foreground);
+    margin: 10px 0;
+    background:#ffffff20;
+    box-shadow: 0 0 3px;
+}
+
+.statuscafe-author {  
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+    </style>
+      <div id="statuscafe-20-posts"></div>
+      
+<script>
+const statuscafe_username = "layeredcake"; // change the username!!!
+const statuscafe_feed = "https://status.cafe/users/";
+const atom_url = ".atom";
+
+fetch(statuscafe_feed + statuscafe_username + atom_url)
+  .then(res => res.text())
+  .then(xmlText => {
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(xmlText, "application/xml");
+    const posts = xml.querySelectorAll("entry");
+    const container = document.getElementById("statuscafe-20-posts");
+
+    posts.forEach(entry => {
+      const author_name = entry.querySelector("author > name")?.textContent;
+      const content = entry.querySelector("content")?.textContent;
+      const posted = entry.querySelector("published")?.textContent;
+      const date = posted ? new Date(posted) : null;
+      const post_date = date ? date.toLocaleString("en-GB", { // en-GB sets it as DAY MONTH, if you want it month day change to en-US
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        })
+      : "";
+      const statuspost = document.createElement("div");
+      statuspost.className = "statuscafe-post";
+
+      // if you wanted a different author name you could always replace ${author_name} with whatever you want to show
+      statuspost.innerHTML = `
+      <p class="statuscafe-author">${author_name}</p>
+        <p class="statuscafe-content">${content}</p>
+        <div class="statuscafe-date">${post_date}</div>
+      `;
+
+      container.appendChild(statuspost);
+    });
+  })
+  .catch(error => {
+      console.error(error);
+  });
+</script>
+
+    </div>
+    <details>
+      <summary>View Code</summary>
+      <span class="martop">CSS:</span>      
+<pre><code class="language-css">.statuscafe-post:first-of-type {
+  margin-top: 0;
+}
+
+.statuscafe-post:last-of-type {
+  margin-bottom: 0;
+}
+
+.statuscafe-post {
+  padding: 10px;
+  border: 1px solid var(--foreground);
+  margin: 10px 0;
+  background:#ffffff20;
+  box-shadow: 0 0 3px;
+}
+
+.statuscafe-author {  
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}</code></pre>
+
+  <span class="martop">HTML:</span>
+<pre><code class="language-html">&lt;div id="statuscafe-20-posts"&gt;   &lt;/div&gt;
+&lt;!-- this is all you need!!! everything else will be added with the javascript --&gt;
+</code></pre>
+    
+<span class="martop">JS:</span>
+<pre><code class="language-js">
+const statuscafe_username = "layeredcake"; // change the statuscafe_username!!!
+const statuscafe_feed = "https://status.cafe/users/";
+const atom_url = ".atom";
+
+fetch(statuscafe_feed + statuscafe_username + atom_url)
+  .then(res => res.text())
+  .then(xmlText => {
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(xmlText, "application/xml");
+    const posts = xml.querySelectorAll("entry");
+    const container = document.getElementById("statuscafe-20-posts");
+
+    posts.forEach(entry => {
+      const author_name = entry.querySelector("author > name")?.textContent;
+      const content = entry.querySelector("content")?.textContent;
+      const posted = entry.querySelector("published")?.textContent;
+      const date = posted ? new Date(posted) : null;
+      const post_date = date ? date.toLocaleString("en-GB", { // en-GB sets it as DAY MONTH, if you want it month day change to en-US
+          day: "numeric",
+          month: "long",
+          year: "numeric",
+          hour: "2-digit",
+          minute: "2-digit",
+          hour12: false,
+        })
+      : "";
+      const statuspost = document.createElement("div");
+      statuspost.className = "statuscafe-post";
+
+      // if you wanted a different author name you could always replace ${author_name} with whatever you want to show
+      statuspost.innerHTML = `
+      <p class="statuscafe-author">${author_name}</p>
+        <p class="statuscafe-content">${content}</p>
+        <div class="statuscafe-date">${post_date}</div>
+      `;
+
+      container.appendChild(statuspost);
+    });
+  })
+  .catch(error => {
+      console.error(error);
+  });</code></pre>
     </details>
     
 </section>
