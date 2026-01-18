@@ -106,7 +106,7 @@ hr {
   .show {
       display: block;
   }
-  
+
   .filtertag {
       cursor: pointer;
       background: var(--background);
