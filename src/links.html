@@ -26,11 +26,14 @@ lucide: <script src="https://loveberry.nekoweb.org/assets/js/lucide.js"></script
                     {{ day }}{{ suffix }} of {{ linksLastModified | date: "%B, %Y" }}, there are {{ links | size }} links on this page.</b></p>
             </div>
               <hr>
+              <div class="search-flex">
               <div class="search-wrapper">
               <span class="icon">
                 <i data-lucide="search"></i>
               </span>              
               <input id="searchInput" type="text" placeholder="Search the collection...">
+              </div>
+          <button id="viewbutton">View as grid</button>
               </div>
               <hr>
               <p class="tagsec">Or sort by tag:</p>
@@ -48,7 +51,7 @@ lucide: <script src="https://loveberry.nekoweb.org/assets/js/lucide.js"></script
                   <button class="filtertag" onclick="filterSelection('misc');  noteHide()"><i data-lucide="archive"></i> Misc</button>
                   <button class="filtertag" onclick="filterSelection('junefave'); juneNote()"><i data-lucide="cake-slice"></i> June's Favourites</button>
                 </div>
-                
+             
   <hr>
   <section id="junenote" class="postdir note">
     <div class="noteline">
@@ -80,6 +83,70 @@ lucide: <script src="https://loveberry.nekoweb.org/assets/js/lucide.js"></script
   </section>
   {% endfor %}
   
+
+<script>
+const btn = document.getElementById("viewbutton");
+
+let active = localStorage.getItem("viewMode") === "grid";
+let originalNodes = [];
+let originalMargins = new Map();
+let container = null;
+
+function applyGrid() {
+  const r = document.querySelector(".mainb #content");
+  const fd = document.querySelectorAll(".filterDiv");
+  const d = document.querySelectorAll(".postdir.snippets, .postdir.filterDiv");
+
+  fd.forEach(el => {
+    originalMargins.set(el, el.style.margin);
+    el.style.margin = "0";
+  });
+
+  container = document.createElement("div");
+  container.style.cssText =
+    "display:grid;grid-template-columns:repeat(3,minmax(100px,1fr));gap:10px;";
+
+  d.forEach(e => {
+    originalNodes.push(e);
+    container.appendChild(e);
+  });
+
+  r.appendChild(container);
+
+  btn.textContent = "View as list";
+  localStorage.setItem("viewMode", "grid");
+  active = true;
+}
+
+function applyList() {
+  const r = document.querySelector(".mainb #content");
+
+  originalNodes.forEach(e => r.appendChild(e));
+  originalMargins.forEach((m, el) => el.style.margin = m || "");
+
+  container?.remove();
+
+  originalNodes = [];
+  originalMargins.clear();
+  container = null;
+
+  btn.textContent = "View as grid";
+  localStorage.setItem("viewMode", "list");
+  active = false;
+}
+
+btn.addEventListener("click", () => {
+  active ? applyList() : applyGrid();
+});
+
+if (active) {
+  applyGrid();
+} else {
+  btn.textContent = "View as grid";
+}
+</script>
+
+
 <script>
     filterSelection("all")
     function filterSelection(c) {

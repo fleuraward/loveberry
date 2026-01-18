@@ -512,4 +512,9 @@ hr {
   display: inline-block;
 }
 
+
+  #viewbutton {
+    display: none;
+  }
+
 }

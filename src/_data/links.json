@@ -145,6 +145,11 @@
         "description": "Jb's comment pinning add-on for ayano's comment widget"
     },
     {
+        "url": "https://stupied.nekoweb.org/blog/2025-Comments/",
+        "tags": ["Snippets"],
+        "description": "Stupied's image add-on for ayano's comment widget"
+    },
+    {
         "url": "https://www.dafont.com/",
         "tags": ["Fonts"],
         "description": "A font collection database"
@@ -774,5 +779,50 @@
         "url": "https://melankorin.net/links/library/",
         "tags": ["Misc"],
         "description": "Melankorin's list of links"
+    },
+    {
+        "url": "https://toyhou.se/4739396.-ribbons",
+        "tags": ["Graphics"],
+        "description": "Ribbons used for OCS on toyhouse"
+    },
+    {
+        "url": "https://petracoding.github.io/pinterest/",
+        "tags": ["Snippets", "Misc"],
+        "description": "Add a pinterest board to your site, using an iframe!"
+    },
+    {
+        "url": "https://ui.land/resources",
+        "tags": ["Misc"],
+        "description": "Resource list"
+    },
+    {
+        "url": "https://allthetags.com/",
+        "tags": ["Basic", "Misc"],
+        "description": " A list of all the html tags, clicking on one shows a brief description and example."
+    },
+    {
+        "url": "https://tutorials.designfreaks.net/",
+        "tags": ["Misc"],
+        "description": "cool site with a few tutorials and guides"
+    },
+    {
+        "url": "https://variations.leprd.space/",
+        "tags": ["Graphics", "Misc"],
+        "description": "resource site with graphics, and codes"
+    },
+    {
+        "url": "https://moosyu.github.io/pages/guides/nekoweb_stats_image/",
+        "tags": ["Snippets", "Misc"],
+        "description": "A guide on how to show nekoweb following as images"
+    },
+    {
+        "url": "https://rice.place/other/discord.html",
+        "tags": ["Snippets", "Misc"],
+        "description": "A script that shows if you're online on discord"
+    },
+    {
+        "url": "https://docs.nekoweb.org",
+        "tags": ["Misc",  "June's Favourites"],
+        "description": "A website I'm workig on aimed at beginners for getting help with coding and nekoweb-related things!"
     }
   ]

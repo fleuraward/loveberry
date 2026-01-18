@@ -48,6 +48,27 @@ hr {
     margin-bottom: 10px;
   }
 
+  .search-flex {
+    display: flex;
+    gap: 10px;
+  }
+
+  #viewbutton {
+    width: 150px;
+    display: block;
+      font-family: inherit;
+      font-size: 1rem !important;
+    background: var(--sumbg);
+  padding: 3px 8px;
+  color: var(--foreground);
+  border: var(--foreground) 1px solid;
+  cursor:pointer;
+  }
+
+  #viewbutton:hover {
+    background: var(--accent10)
+  }
+
   #searchInput {
     width: 100%;
     padding: 0.5rem 2rem;
@@ -105,3 +126,9 @@ hr {
   }
   
   .nmbp { margin:10px 0 0 00;}
+
+  @media screen and (max-width: 1030px) {
+  #viewbutton {
+    display: none !important;
+  }
+}
